@@ -603,6 +603,123 @@ footer {
 
 /* ── MISC ── */
 .divider { height: 1px; background: var(--border); margin: 40px 0; }
+
+/* ── MOBILE RESPONSIVE ── */
+@media(max-width:480px){
+  body { font-size: 14px; }
+
+  /* Header */
+  header { padding: 0 16px; }
+  .header-inner { height: 48px; }
+  .site-logo { font-size: 0.95rem; }
+
+  /* Hero */
+  .hero { padding: 36px 16px 32px; }
+  .hero-breadcrumb { font-size: 10px; margin-bottom: 14px; }
+  .hero-category { font-size: 10px; padding: 3px 10px; margin-bottom: 12px; }
+  .hero h1 { font-size: 1.5rem; margin-bottom: 12px; }
+  .hero-deck { font-size: 0.88rem; margin-bottom: 20px; line-height: 1.7; }
+  .hero-meta { gap: 12px; padding-top: 14px; }
+  .hero-meta-item { font-size: 11px; }
+
+  /* Layout */
+  .page-wrap { padding: 28px 16px; }
+
+  /* Article */
+  .article-body h2 { font-size: 1.2rem; margin: 32px 0 12px; padding-left: 12px; }
+  .article-body h3 { font-size: 0.95rem; margin: 20px 0 8px; }
+  .article-body p { font-size: 0.88rem; margin-bottom: 14px; }
+
+  /* TOC */
+  .toc-box { padding: 16px 18px; margin-bottom: 28px; }
+  .toc-box a { font-size: 12.5px; }
+  .toc-box li { margin-bottom: 6px; padding-left: 20px; }
+
+  /* Spot Cards */
+  .spot-card-header { padding: 14px 16px 12px; gap: 10px; }
+  .spot-icon { width: 36px; height: 36px; font-size: 18px; }
+  .spot-title { font-size: 0.9rem; }
+  .spot-sub { font-size: 11px; }
+  .spot-card-body { padding: 12px 16px; }
+  .spot-card-body p { font-size: 0.82rem; }
+  .spot-meta { padding: 10px 16px; gap: 10px; }
+  .spot-meta-item { font-size: 10.5px; }
+
+  /* Compare Table */
+  .compare-wrap { margin: 16px 0; }
+  table.compare th { padding: 10px 10px; font-size: 11px; }
+  table.compare td { padding: 9px 10px; font-size: 12px; }
+  table.compare .row-head { font-size: 12px; }
+
+  /* Callout */
+  .callout { padding: 14px 16px; margin: 18px 0; font-size: 0.82rem; }
+
+  /* Review Cards */
+  .review-card { padding: 18px 16px; }
+  .review-header { gap: 10px; margin-bottom: 10px; }
+  .review-avatar { width: 34px; height: 34px; font-size: 16px; }
+  .review-name { font-size: 13px; }
+  .review-meta { font-size: 10px; }
+  .review-stars { font-size: 12px; }
+  .review-title { font-size: 0.9rem; margin-bottom: 8px; }
+  .review-body { font-size: 0.82rem; }
+  .review-tag { font-size: 10px; }
+
+  /* Featured Card */
+  .featured-body { padding: 18px 16px 14px; }
+  .featured-name { font-size: 1.15rem; }
+  .featured-sub { font-size: 12px; }
+  .featured-point { font-size: 0.82rem; gap: 8px; }
+  .featured-btns { padding: 14px 16px 16px; gap: 8px; }
+  .btn-orange, .btn-line, .btn-outline { font-size: 12px; padding: 10px 16px; }
+
+  /* Final CTA */
+  .final-cta { padding: 28px 20px; margin: 32px 0 0; }
+  .final-cta h2 { font-size: 1.2rem; }
+  .final-cta p { font-size: 0.82rem; }
+  .final-cta-btns { flex-direction: column; }
+  .final-cta-btns a { justify-content: center; width: 100%; }
+
+  /* Footer */
+  footer { padding: 24px 16px; }
+  .footer-inner { flex-direction: column; text-align: center; gap: 12px; }
+  .footer-logo { font-size: 0.9rem; }
+  .footer-text { font-size: 10px; }
+
+  /* Lang Bar */
+  .lang-bar { padding: 0 16px; }
+  .lang-bar-inner { justify-content: center; }
+  .lang-bar a { font-size: 10px; padding: 3px 8px; }
+
+  /* Divider */
+  .divider { margin: 28px 0; }
+
+  /* Sidebar CTA (visible on mobile in some layouts) */
+  .sidebar-cta { padding: 16px; }
+  .sidebar-cta-title { font-size: 0.95rem; }
+  .sidebar-cta-sub { font-size: 11px; }
+}
+
+/* Tablet adjustments */
+@media(max-width:720px) and (min-width:481px){
+  .hero { padding: 44px 20px 40px; }
+  .hero h1 { font-size: 1.7rem; }
+  .page-wrap { padding: 36px 20px; }
+  .final-cta { padding: 32px 24px; }
+  .final-cta-btns { flex-direction: column; align-items: center; }
+  .final-cta-btns a { width: 80%; justify-content: center; }
+}
+
+/* Touch-friendly tap targets */
+@media(max-width:720px){
+  a, button { min-height: 44px; display: inline-flex; align-items: center; }
+  .toc-box a { min-height: 36px; }
+  .lang-bar a { min-height: 32px; }
+  .spot-badge { min-height: auto; }
+  .hero-category { min-height: auto; }
+  .section-tag { min-height: auto; }
+  .section-tag::before, .section-tag::after { min-height: auto; display: inline; }
+}
 </style>
 <script type="application/ld+json">
 {
