@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 150" width="100%" height="100%">
+  <defs>
+    <style>
+      .logo-text {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        font-size: 42px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        text-anchor: middle;
+        fill: #1a1a2e;
+      }
+      .accent-gold {
+        fill: #d4af37;
+      }
+      .subline {
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 11px;
+        letter-spacing: 5px;
+        fill: #666677;
+        text-anchor: middle;
+        text-transform: uppercase;
+      }
+    </style>
+  </defs>
+  <text x="300" y="80" class="logo-text">
+    <tspan>Bangkok </tspan>
+    <tspan class="accent-gold">Night </tspan>
+    <tspan>Guide</tspan>
+  </text>
+  <line x1="220" y1="105" x2="380" y2="105" stroke="#d4af37" stroke-width="1.5" opacity="0.6" />
+  <circle cx="300" cy="105" r="3" fill="#d4af37" />
+  <text x="300" y="128" class="subline">bangkoknightguide.com</text>
+</svg>
