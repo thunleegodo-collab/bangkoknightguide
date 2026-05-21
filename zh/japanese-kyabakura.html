@@ -72,6 +72,27 @@
 }
 </script>
 
+<!-- Structured Data: BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首页",
+      "item": "https://bangkoknightguide.com/zh/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "日式陪酒吧指南"
+    }
+  ]
+}
+</script>
+
 <!-- Structured Data: NightClub (Club LINE23 Bangkok) -->
 <script type="application/ld+json">
 {
@@ -87,6 +108,11 @@
     "addressCountry": "TH"
   },
   "openingHours": "Mo Tu We Th Fr Sa 20:00-01:00",
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 13.73825430,
+    "longitude": 100.56516930
+  },
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "4.9",
