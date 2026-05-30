@@ -20,14 +20,19 @@ Club LINE23 Bangkok（clubline23-bangkok.com）への集客導線サイト。
 - 静的HTML（フレームワークなし）
 - GitHub Pages でホスティング（CNAME: bangkoknightguide.com）
 - リポジトリ: thunleegodo-collab/bangkoknightguide
-- 4言語対応: 英語（ルート）、日本語（/ja/）、韓国語（/ko/）、中国語（/zh/）
+- 5言語対応: 英語（ルート）、日本語（/ja/）、韓国語（/ko/）、中国語簡体字（/zh/）、中国語繁体字（/zh-Hant/、台湾・香港向け）
 
 ## ページ構成
 - `index.html` / `en/index.html` — アソーク夜遊びガイド（英語）
 - `ja/index.html` — アソーク夜遊びガイド（日本語）
 - `ko/index.html` — アソーク夜遊びガイド（韓国語）
-- `zh/index.html` — アソーク夜遊びガイド（中国語）
+- `zh/index.html` — アソーク夜遊びガイド（中国語簡体字 zh-Hans）
+- `zh-Hant/index.html` — アソーク夜遊びガイド（中国語繁体字 zh-Hant、台湾・香港向け）
 - `japanese-kyabakura.html` — 日本人キャバクラガイド（日本語、各言語版あり）
+
+## hreflang ルール（5言語）
+- 各ページの head は `en` / `ja` / `ko` / `zh-Hans`（/zh/）/ `zh-Hant`（/zh-Hant/）/ `x-default` を相互参照
+- 中国語を変更したら簡体字（/zh/）と繁体字（/zh-Hant/）の両方を同期（繁体字は s2twp 変換＋台湾語彙補正：包间→包廂、素坤逸/蘇坤蔚、评测→評測 等）
 
 ## SEO対策
 - hreflang タグで多言語対応

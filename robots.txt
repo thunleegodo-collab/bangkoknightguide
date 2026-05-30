@@ -23,6 +23,16 @@ Allow: /
 User-agent: Applebot
 Allow: /
 
+# 韓国検索エンジン（Naver=韓国シェア約63%, Daum）
+User-agent: Yeti
+Allow: /
+
+User-agent: NaverBot
+Allow: /
+
+User-agent: Daumoa
+Allow: /
+
 # 悪意あるスクレイピングボットをブロック
 User-agent: AhrefsBot
 Disallow: /
