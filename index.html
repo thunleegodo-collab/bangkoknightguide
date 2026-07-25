@@ -47,7 +47,7 @@
   "url": "https://bangkoknightguide.com/",
   "inLanguage": "en",
   "datePublished": "2026-01-01",
-  "dateModified": "2026-05-12",
+  "dateModified": "2026-07-25",
   "publisher": {
     "@type": "Organization",
     "name": "Bangkok Night Guide",
@@ -178,7 +178,6 @@
   }
 }
 </script>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Noto+Sans+JP:wght@400;500;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -200,7 +199,7 @@
 body {
   background: var(--bg);
   color: var(--ink);
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: -apple-system, 'Hiragino Sans', 'Yu Gothic UI', Meiryo, sans-serif;
   font-size: 15px;
   line-height: 1.85;
 }
@@ -218,7 +217,7 @@ header {
   height: 56px;
 }
 .site-logo {
-  font-family: 'Playfair Display', serif;
+  font-family: Georgia, 'Times New Roman', serif;
   font-size: 1.1rem; font-weight: 700;
   color: #fff; text-decoration: none;
   letter-spacing: 0.02em;
@@ -271,7 +270,7 @@ header {
   margin-bottom: 16px;
 }
 .hero h1 {
-  font-family: 'Playfair Display', serif;
+  font-family: Georgia, 'Times New Roman', serif;
   font-size: clamp(1.8rem, 5vw, 3rem);
   font-weight: 900; color: #fff;
   line-height: 1.2; margin-bottom: 16px;
@@ -281,7 +280,7 @@ header {
   color: rgba(255,255,255,0.6);
   font-size: 1rem; max-width: 560px;
   line-height: 1.8; margin-bottom: 28px;
-  font-family: 'Source Serif 4', serif;
+  font-family: Georgia, serif;
   font-style: italic;
 }
 .hero-meta {
@@ -310,7 +309,7 @@ header {
 
 /* ── ARTICLE ── */
 .article-body h2 {
-  font-family: 'Playfair Display', serif;
+  font-family: Georgia, 'Times New Roman', serif;
   font-size: 1.5rem; font-weight: 700;
   color: var(--ink);
   border-left: 4px solid var(--orange);
@@ -410,6 +409,45 @@ header {
 .badge-chill { background: #eef5ff; color: #3b6fe0; }
 .badge-group { background: #edfaf3; color: var(--green); }
 
+/* ── NEWS ── */
+.news-note {
+  font-size: 12px; color: var(--muted);
+  padding: 10px 14px; margin-bottom: 20px;
+  background: var(--bg2); border-radius: 4px;
+}
+.news-item {
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--orange);
+  border-radius: 6px;
+  background: #fff;
+  padding: 16px 20px;
+  margin-bottom: 14px;
+}
+.news-head {
+  display: flex; flex-wrap: wrap; align-items: center;
+  gap: 10px; margin-bottom: 8px;
+}
+.news-date { font-size: 11.5px; color: var(--muted); letter-spacing: 0.03em; }
+.news-tag {
+  display: inline-block; font-size: 10px; font-weight: 700;
+  padding: 2px 8px; border-radius: 2px;
+  letter-spacing: 0.06em; text-transform: uppercase;
+}
+.tag-alert { background: #fdecea; color: #c0392b; }
+.tag-rule { background: #eef5ff; color: #3b6fe0; }
+.tag-good { background: #edfaf3; color: var(--green); }
+.news-title { font-size: 0.98rem; font-weight: 700; line-height: 1.65; margin-bottom: 10px; }
+.news-item p { font-size: 0.88rem; color: var(--ink-light); margin-bottom: 10px; }
+.news-impact {
+  background: var(--bg2); border-radius: 4px;
+  padding: 10px 14px; font-size: 0.84rem;
+  color: var(--ink-light); line-height: 1.8;
+}
+.news-impact strong { color: var(--ink); }
+.news-src { font-size: 11px; color: var(--muted); margin-top: 8px; }
+.news-src a { color: var(--muted); }
+.news-src a:hover { color: var(--orange); }
+
 /* ── COMPARE TABLE ── */
 .compare-wrap {
   overflow-x: auto; margin: 24px 0;
@@ -486,7 +524,7 @@ table.compare .row-highlight .row-head { color: var(--orange); }
 .review-meta { font-size: 11px; color: var(--muted); margin-top: 2px; }
 .review-stars { margin-left: auto; color: var(--gold); font-size: 14px; }
 .review-title {
-  font-family: 'Source Serif 4', serif;
+  font-family: Georgia, serif;
   font-size: 1rem; font-weight: 600;
   margin-bottom: 10px; color: var(--ink);
 }
@@ -518,7 +556,7 @@ table.compare .row-highlight .row-head { color: var(--orange); }
 }
 .featured-body { padding: 24px 24px 20px; }
 .featured-name {
-  font-family: 'Playfair Display', serif;
+  font-family: Georgia, 'Times New Roman', serif;
   font-size: 1.4rem; font-weight: 700;
   margin-bottom: 4px;
 }
@@ -541,7 +579,7 @@ table.compare .row-highlight .row-head { color: var(--orange); }
 .featured-point-text strong { color: var(--ink); }
 .featured-divider { height: 1px; background: var(--border); margin: 20px 0; }
 .featured-quote {
-  font-family: 'Source Serif 4', serif;
+  font-family: Georgia, serif;
   font-style: italic; font-size: 0.95rem;
   color: var(--ink-light); line-height: 1.8;
   padding: 0 4px;
@@ -623,7 +661,7 @@ table.compare .row-highlight .row-head { color: var(--orange); }
   text-align: center; margin-bottom: 20px;
 }
 .sidebar-cta-title {
-  font-family: 'Playfair Display', serif;
+  font-family: Georgia, 'Times New Roman', serif;
   font-size: 1.05rem; color: #fff;
   margin-bottom: 6px;
 }
@@ -672,7 +710,7 @@ table.compare .row-highlight .row-head { color: var(--orange); }
   margin-bottom: 12px;
 }
 .final-cta h2 {
-  font-family: 'Playfair Display', serif;
+  font-family: Georgia, 'Times New Roman', serif;
   font-size: 1.6rem; color: #fff;
   margin-bottom: 10px; border: none; padding: 0;
 }
@@ -693,7 +731,7 @@ footer {
   align-items: center;
 }
 .footer-logo {
-  font-family: 'Playfair Display', serif;
+  font-family: Georgia, 'Times New Roman', serif;
   font-size: 1rem; color: #fff; font-weight: 700;
 }
 .footer-logo span { color: var(--gold); }
@@ -860,6 +898,7 @@ footer {
   <div class="header-inner">
     <a class="site-logo" href="#">Bangkok <span>Night</span> Guide</a>
     <nav class="header-nav">
+      <a href="#news">News</a>
       <a href="#area">Area</a>
       <a href="#compare">Venue Types</a>
       <a href="#review">Reviews</a>
@@ -896,6 +935,7 @@ footer {
       <div class="toc-box">
         <div class="toc-label">Table of Contents</div>
         <ol>
+          <li><a href="#news">Asok Nightlife News &amp; Rule Changes</a></li>
           <li><a href="#area">Getting to Know the Asok Nightlife Area</a></li>
           <li><a href="#spots">Venue-by-Venue Guide</a></li>
           <li><a href="#compare">Go-Go Bars vs. Private Karaoke: An Honest Comparison</a></li>
@@ -905,6 +945,74 @@ footer {
           <li><a href="#expat">New to Bangkok? Expat Guide</a></li>
           <li><a href="#shoplist">Snack Bars & Karaoke around Asok</a></li>
         </ol>
+      </div>
+
+      <!-- Section 0: News -->
+      <h2 id="news">Asok Nightlife News &amp; Rule Changes</h2>
+      <p>The rules around Bangkok nightlife have moved fast over the past year, and July 2026 brought the biggest safety shake-up in a decade. Here is what actually affects a night out around Asok — newest first.</p>
+
+      <div class="news-note">📅 Last updated: 25 July 2026 · Regulations and enforcement change quickly. Confirm details with your venue on the night.</div>
+
+      <div class="news-item">
+        <div class="news-head">
+          <span class="news-tag tag-alert">Safety</span>
+          <span class="news-date">12 July 2026 — ongoing</span>
+        </div>
+        <div class="news-title">Citywide fire-safety sweep after the Lat Phrao pub fire — 56 venues ordered to suspend operations</div>
+        <p>Shortly before midnight on 12 July, fire tore through Rong Beer Na Lat Phrao, a live-music beer hall in Chatuchak district. At least 36 people died and more than 70 were injured. Investigators pointed to a short circuit in a ceiling air-conditioning unit, flammable soundproofing that spread the flames across the ceiling, and emergency exits blocked by crates and tables. The venue was registered as a "restaurant with live music" rather than an entertainment venue, which had exempted it from the stricter fire-retardant material rules.</p>
+        <p>Governor Chadchart Sittipunt ordered all 50 district offices to inspect nightlife venues jointly with police. Of 1,091 registered venues, 824 were checked in the first three days: 217 passed, 551 were ordered to fix deficiencies, and 56 were told to suspend operations. Watthana district — which covers Asok, Sukhumvit Soi 23, Thonglor and Ekkamai — ran its own joint inspections on 16 July, checking wiring, emergency lighting, fire equipment and exit signage.</p>
+        <div class="news-impact"><strong>What it means for your night:</strong> A handful of venues around Sukhumvit may be temporarily closed or mid-refit on any given night, so have a second choice ready and message ahead if you can. When you sit down, take ten seconds to locate the exit — especially in basement rooms and upper-floor venues. Venues that came through the inspection cleanly are the safer bet right now.</div>
+        <div class="news-src">Source: <a href="https://www.bangkokpost.com/thailand/general/3289972" target="_blank" rel="nofollow noopener">Bangkok Post</a></div>
+      </div>
+
+      <div class="news-item">
+        <div class="news-head">
+          <span class="news-tag tag-rule">Opening Hours</span>
+          <span class="news-date">July 2026</span>
+        </div>
+        <div class="news-title">4am closing still doesn't reach Asok — Soi Cowboy and Soi 23 remain on 2am</div>
+        <p>Bangkok's 4am closing time applies only inside designated entertainment zones: Silom/Patpong, RCA–New Phetchaburi Road, and Ratchadaphisek. Sukhumvit and Asok are not among them, so venues here legally close at 2am — the same as Thonglor. Prime Minister Anutin Charnvirakul has pushed to scrap zoning altogether and extend hours to 4am nationwide, but as of July 2026 that has not been enacted; the extension is still limited to zones inside five provinces.</p>
+        <p>After the Lat Phrao fire, Chadchart said the existing zoning "no longer reflects current conditions" and that a review is underway. The map could change — in either direction.</p>
+        <div class="news-impact"><strong>What it means for your night:</strong> Around Asok, plan for last orders somewhere between 1:00 and 1:30am. Start earlier than you would in Silom — an 8pm dinner and a 9:30pm first venue gives you a full night. If you genuinely want to go past 2am, that means a taxi to RCA, Ratchada or Silom, not another door on Soi 23.</div>
+        <div class="news-src">Source: <a href="https://www.nationthailand.com/news/general/40068570" target="_blank" rel="nofollow noopener">Nation Thailand</a></div>
+      </div>
+
+      <div class="news-item">
+        <div class="news-head">
+          <span class="news-tag tag-alert">Traveler Alert</span>
+          <span class="news-date">1–15 July 2026</span>
+        </div>
+        <div class="news-title">Police launch a dedicated E-Cigarette Control Centre and a nationwide sweep</div>
+        <p>The Royal Thai Police set up an E-Cigarette Control Centre and ran a nationwide enforcement operation from 1 to 15 July 2026, targeting sellers, distribution networks and online sales. Vapes, e-liquids and heated tobacco products remain completely illegal in Thailand — import, sale and possession — under rules in place since 2014, and enforcement patrols are routine in tourist and nightlife areas including Sukhumvit. Users face fines and confiscation; bringing devices through customs carries far heavier exposure.</p>
+        <div class="news-impact"><strong>What it means for your night:</strong> Leave the vape at home — not in your carry-on, not in your pocket on Soi Cowboy. This is the single most common way a good night in Bangkok turns into a very bad one for foreign visitors. Conventional cigarettes are legal; vapes are not.</div>
+        <div class="news-src">Source: <a href="https://www.pattayamail.com/news/thailand-declares-war-on-illegal-e-cigarettes-555792" target="_blank" rel="nofollow noopener">Pattaya Mail</a></div>
+      </div>
+
+      <div class="news-item">
+        <div class="news-head">
+          <span class="news-tag tag-good">Good News</span>
+          <span class="news-date">29 May 2026</span>
+        </div>
+        <div class="news-title">The 2–5pm alcohol ban is gone for good — shops now sell 11:00 to midnight</div>
+        <p>A Royal Gazette notice published on 29 May 2026 permanently scrapped the afternoon alcohol sales ban that had been on the books since 1972, following a 180-day trial that began in December 2025. Retail sales now run continuously from 11:00 to midnight nationwide. Licensed entertainment venues, hotels and international airport shops are exempt from the hour restrictions.</p>
+        <div class="news-impact"><strong>What it means for your night:</strong> An afternoon beer before you head out is legal again. But convenience stores still stop selling at midnight, so buy anything you want back at the hotel <em>before</em> you go out. Inside a properly licensed venue, service does not stop at midnight.</div>
+        <div class="news-src">Source: <a href="https://www.nationthailand.com/news/general/40066792" target="_blank" rel="nofollow noopener">Nation Thailand</a></div>
+      </div>
+
+      <div class="news-item">
+        <div class="news-head">
+          <span class="news-tag tag-rule">Rules</span>
+          <span class="news-date">In force since 8 November 2025</span>
+        </div>
+        <div class="news-title">Customers — not just bars — can now be fined for drinking outside legal hours</div>
+        <p>The amended Alcoholic Beverage Control Act moved penalties onto the drinker: consuming alcohol outside permitted hours at a venue that isn't licensed for it can bring a fine of up to 10,000 baht. Licensed entertainment venues, hotels and airports are exempt — ordinary restaurants are not. So the risk case is a post-midnight drink at a regular restaurant, not a licensed bar or karaoke club.</p>
+        <div class="news-impact"><strong>What it means for your night:</strong> After midnight, stay inside properly licensed venues. That happens to be the same advice the fire inspections point to, and licensed venues are also where billing standards are clearest — so it costs you nothing to follow.</div>
+        <div class="news-src">Source: <a href="https://thethaiger.com/news/national/thailands-new-alcohol-law-fines-customers-for-drinking-after-hours" target="_blank" rel="nofollow noopener">The Thaiger</a></div>
+      </div>
+
+      <div class="callout callout-info">
+        <strong>ℹ️ The 2026 Asok checklist:</strong>
+        Pick licensed venues, find the exit when you sit down, leave vapes out of the country entirely, and build your night around a 2am finish. Nothing here makes Asok a worse night out — it just rewards planning. The <a href="#shoplist">venue list further down</a> covers the licensed private-room bars around Soi 23 that fit this shape.
       </div>
 
       <!-- Section 1 -->
@@ -1257,7 +1365,7 @@ footer {
         </div>
 
         <!-- Club Line23 -->
-        <div class="spot-card">
+        <div class="spot-card" id="recommend">
           <div class="spot-card-header">
             <div class="spot-icon">👑</div>
             <div>

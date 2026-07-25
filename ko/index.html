@@ -55,7 +55,7 @@
   "url": "https://bangkoknightguide.com/ko/",
   "inLanguage": "ko",
   "datePublished": "2026-01-01",
-  "dateModified": "2026-05-12",
+  "dateModified": "2026-07-25",
   "publisher": {
     "@type": "Organization",
     "name": "Bangkok Night Guide",
@@ -316,6 +316,45 @@ header {
 .badge-hot { background: #fff0ea; color: var(--orange); }
 .badge-chill { background: #eef5ff; color: #3b6fe0; }
 .badge-group { background: #edfaf3; color: var(--green); }
+
+/* ── NEWS ── */
+.news-note {
+  font-size: 12px; color: var(--muted);
+  padding: 10px 14px; margin-bottom: 20px;
+  background: var(--bg2); border-radius: 4px;
+}
+.news-item {
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--orange);
+  border-radius: 6px;
+  background: #fff;
+  padding: 16px 20px;
+  margin-bottom: 14px;
+}
+.news-head {
+  display: flex; flex-wrap: wrap; align-items: center;
+  gap: 10px; margin-bottom: 8px;
+}
+.news-date { font-size: 11.5px; color: var(--muted); letter-spacing: 0.03em; }
+.news-tag {
+  display: inline-block; font-size: 10px; font-weight: 700;
+  padding: 2px 8px; border-radius: 2px;
+  letter-spacing: 0.06em;
+}
+.tag-alert { background: #fdecea; color: #c0392b; }
+.tag-rule { background: #eef5ff; color: #3b6fe0; }
+.tag-good { background: #edfaf3; color: var(--green); }
+.news-title { font-size: 0.98rem; font-weight: 700; line-height: 1.65; margin-bottom: 10px; }
+.news-item p { font-size: 0.88rem; color: var(--ink-light); margin-bottom: 10px; }
+.news-impact {
+  background: var(--bg2); border-radius: 4px;
+  padding: 10px 14px; font-size: 0.84rem;
+  color: var(--ink-light); line-height: 1.8;
+}
+.news-impact strong { color: var(--ink); }
+.news-src { font-size: 11px; color: var(--muted); margin-top: 8px; }
+.news-src a { color: var(--muted); }
+.news-src a:hover { color: var(--orange); }
 
 /* ── COMPARE TABLE ── */
 .compare-wrap {
@@ -908,6 +947,7 @@ footer {
   <div class="header-inner">
     <a class="site-logo" href="#">Bangkok <span>Night</span> Guide</a>
     <nav class="header-nav">
+      <a href="#news">뉴스</a>
       <a href="#area">지역</a>
       <a href="#compare">업소 유형</a>
       <a href="#review">체험담</a>
@@ -944,6 +984,7 @@ footer {
       <div class="toc-box">
         <div class="toc-label">목차</div>
         <ol>
+          <li><a href="#news">아속 밤문화 뉴스 &amp; 규정 변경</a></li>
           <li><a href="#area">방콕 아속 밤문화 에리어 가이드</a></li>
           <li><a href="#spots">소이카우보이 주요 가게 가이드</a></li>
           <li><a href="#compare">방콕 고고바 vs VIP룸 가라오케 솔직 비교</a></li>
@@ -954,6 +995,74 @@ footer {
           <li><a href="#dinner">밤 출발 전에: 추천 저녁 식사 스팟</a></li>
           <li><a href="#shoplist">아속 수쿰빗 23 스낵바·VIP 가라오케 총정리</a></li>
         </ol>
+      </div>
+
+      <!-- Section 0: News -->
+      <h2 id="news">아속 밤문화 뉴스 & 규정 변경</h2>
+      <p>지난 1년 사이 방콕 밤문화 관련 규정이 크게 바뀌었고, 2026년 7월에는 최근 10년 중 가장 강한 안전 규제가 들어왔습니다. 아속 주변에서 실제로 노는 방식에 영향을 주는 내용만 최신순으로 정리했습니다.</p>
+
+      <div class="news-note">📅 최종 업데이트: 2026년 7월 25일 · 규정과 단속은 짧은 기간에도 바뀝니다. 당일에는 반드시 가게 측에 확인하세요.</div>
+
+      <div class="news-item">
+        <div class="news-head">
+          <span class="news-tag tag-alert">안전</span>
+          <span class="news-date">2026년 7월 12일 ~ 진행 중</span>
+        </div>
+        <div class="news-title">랏프라오 화재 이후 전 시내 소방 점검 — 56개 업소 영업 정지 명령</div>
+        <p>7월 12일 자정 무렵 짜뚜짝 구의 라이브 음악 맥주홀 'Rong Beer Na Lat Phrao'에서 화재가 발생해 36명이 사망하고 70명 이상이 다쳤습니다. 천장 에어컨 실내기의 누전이 원인으로 추정되며, 천장 방음재가 불길을 빠르게 퍼뜨렸고 비상구는 맥주 상자와 테이블로 막혀 있었다고 보도됐습니다. 이 업소는 '유흥업소'가 아니라 '라이브 음악이 있는 레스토랑'으로 등록돼 있어 더 엄격한 방염 자재 규정을 적용받지 않았습니다.</p>
+        <p>찻찻 시장은 50개 전 구청에 경찰과 합동으로 유흥업소를 점검하도록 지시했습니다. 등록된 1,091개 업소 중 첫 3일간 824곳을 점검해 217곳이 기준을 통과했고, 551곳은 개선 명령, 56곳은 임시 영업 정지를 받았습니다. 아속·수쿰빗 23·통러·에까마이를 관할하는 왓타나 구에서도 7월 16일 배선, 비상등, 소화설비, 비상구 표시를 점검하는 합동 단속이 진행됐습니다.</p>
+        <div class="news-impact"><strong>내 일정에 미치는 영향:</strong> 수쿰빗 주변에서도 날짜에 따라 임시 휴업이나 공사 중인 가게가 나올 수 있으니 2순위 후보를 정해 두고, 가능하면 미리 연락해 두세요. 자리에 앉으면 10초만 써서 비상구 위치를 확인하는 것이 좋습니다(특히 지하나 위층 업소). 지금은 점검을 문제없이 통과한 가게를 고르는 것이 가장 안전합니다.</div>
+        <div class="news-src">출처: <a href="https://www.bangkokpost.com/thailand/general/3289972" target="_blank" rel="nofollow noopener">Bangkok Post</a></div>
+      </div>
+
+      <div class="news-item">
+        <div class="news-head">
+          <span class="news-tag tag-rule">영업시간</span>
+          <span class="news-date">2026년 7월 기준</span>
+        </div>
+        <div class="news-title">새벽 4시 영업은 아직 아속에 적용되지 않음 — 소이카우보이·소이23은 여전히 새벽 2시 마감</div>
+        <p>방콕에서 새벽 4시 영업이 허용되는 곳은 지정 유흥 구역 안뿐입니다. 실롬/팟퐁, RCA–뉴펫부리 로드, 랏차다피섹이 여기에 해당합니다. 수쿰빗과 아속은 포함되지 않아 이 일대는 법적으로 새벽 2시 마감입니다(통러도 동일). 아누틴 총리는 구역제를 폐지하고 전국적으로 4시까지 연장하는 방안을 추진해 왔지만, 2026년 7월 현재 시행되지 않았고 연장은 5개 주의 지정 구역에만 적용됩니다.</p>
+        <p>다만 랏프라오 화재 이후 찻찻 시장은 현행 구역 구분이 "지금의 현실을 반영하지 못한다"며 재검토에 들어갔습니다. 구역 지도는 어느 방향으로든 바뀔 수 있습니다.</p>
+        <div class="news-impact"><strong>내 일정에 미치는 영향:</strong> 아속 주변은 라스트 오더 1:00~1:30을 전제로 짜는 것이 맞습니다. 실롬보다 일찍 시작하세요 — 저녁 8시 식사, 9시 30분 첫 가게면 하룻밤이 딱 맞아떨어집니다. 정말 새벽 2시 이후까지 가고 싶다면 소이23에서 다음 가게를 찾는 게 아니라 택시로 RCA·랏차다·실롬으로 이동하는 형태가 됩니다.</div>
+        <div class="news-src">출처: <a href="https://www.nationthailand.com/news/general/40068570" target="_blank" rel="nofollow noopener">Nation Thailand</a></div>
+      </div>
+
+      <div class="news-item">
+        <div class="news-head">
+          <span class="news-tag tag-alert">여행자 주의</span>
+          <span class="news-date">2026년 7월 1~15일</span>
+        </div>
+        <div class="news-title">경찰, 전자담배 단속센터 신설하고 전국 일제 단속</div>
+        <p>태국 왕립경찰은 전자담배 전담 단속센터(E-Cigarette Control Centre)를 설치하고 2026년 7월 1~15일 전국 단속을 실시했습니다. 판매자, 유통망, 온라인 판매가 주요 대상입니다. 태국에서는 2014년부터 전자담배·액상·궐련형 전자담배가 수입·판매·소지 모두 전면 불법이며, 수쿰빗을 포함한 관광·유흥 지역에서는 순찰 단속이 일상적으로 이뤄집니다. 사용자도 벌금과 압수 대상이고, 세관에서 반입이 적발되면 훨씬 무겁게 처리됩니다.</p>
+        <div class="news-impact"><strong>내 일정에 미치는 영향:</strong> 전자담배는 한국에 두고 오세요. 기내 수하물에도, 소이카우보이를 걸을 때 주머니에도 넣지 마세요. 외국인 여행자의 좋은 밤이 한순간에 망가지는 가장 흔한 이유입니다. 일반 담배는 합법, 전자담배만 불법이라는 점에 주의하세요.</div>
+        <div class="news-src">출처: <a href="https://www.pattayamail.com/news/thailand-declares-war-on-illegal-e-cigarettes-555792" target="_blank" rel="nofollow noopener">Pattaya Mail</a></div>
+      </div>
+
+      <div class="news-item">
+        <div class="news-head">
+          <span class="news-tag tag-good">좋은 소식</span>
+          <span class="news-date">2026년 5월 29일</span>
+        </div>
+        <div class="news-title">오후 2~5시 주류 판매 금지 완전 폐지 — 판매는 11:00~24:00</div>
+        <p>2026년 5월 29일자 관보 고시로 1972년부터 이어져 온 오후 2시~5시 주류 판매 금지가 영구 폐지됐습니다. 2025년 12월부터의 180일 시범 운영을 거친 결과입니다. 소매 판매 시간은 전국적으로 11:00~24:00 연속 영업이 됐습니다. 허가받은 유흥업소, 호텔, 국제공항 매장은 이 시간 제한에서 제외됩니다.</p>
+        <div class="news-impact"><strong>내 일정에 미치는 영향:</strong> 나가기 전 낮술이 다시 합법입니다. 다만 편의점 판매는 자정에 끝나므로, 호텔에서 마실 것은 나가기 전에 사 두세요. 정식 허가 업소 안에서는 자정에 제공이 끊기지 않습니다.</div>
+        <div class="news-src">출처: <a href="https://www.nationthailand.com/news/general/40066792" target="_blank" rel="nofollow noopener">Nation Thailand</a></div>
+      </div>
+
+      <div class="news-item">
+        <div class="news-head">
+          <span class="news-tag tag-rule">법 개정</span>
+          <span class="news-date">2025년 11월 8일 시행</span>
+        </div>
+        <div class="news-title">가게뿐 아니라 '마신 손님'도 벌금 대상 (최대 1만 바트)</div>
+        <p>개정 주류통제법으로 처벌이 손님에게도 적용됩니다. 시간 외 음주가 허용되지 않은 업소에서 규제 시간대에 술을 마시면 최대 10,000바트의 벌금이 부과될 수 있습니다. 허가받은 유흥업소·호텔·공항은 예외지만 일반 음식점은 예외가 아닙니다. 즉 위험한 경우는 '자정 이후 일반 식당에서 마시는 것'이지, 정식 바나 가라오케가 아닙니다.</p>
+        <div class="news-impact"><strong>내 일정에 미치는 영향:</strong> 자정 이후에는 정식 허가를 받은 업소 안에 있으세요. 위의 소방 점검 이야기와 결론이 같고, 정식 업소는 계산 방식도 명확합니다. 지켜서 손해 볼 부분이 없습니다.</div>
+        <div class="news-src">출처: <a href="https://thethaiger.com/news/national/thailands-new-alcohol-law-fines-customers-for-drinking-after-hours" target="_blank" rel="nofollow noopener">The Thaiger</a></div>
+      </div>
+
+      <div class="callout callout-info">
+        <strong>ℹ️ 2026년판 아속 체크리스트:</strong>
+        정식 허가 업소를 고른다 / 앉으면 비상구를 확인한다 / 전자담배는 아예 들고 오지 않는다 / 새벽 2시 마감을 전제로 짠다. 이 네 가지면 충분합니다. 아속의 밤이 나빠진 게 아니라, 준비한 사람이 더 즐기는 상황이 된 것뿐입니다. <a href="#shoplist">아래 업소 정리</a>에서 이 조건에 맞는 소이23 주변 정식 VIP룸 업소를 소개합니다.
       </div>
 
       <!-- Section 1 -->
@@ -1384,7 +1493,7 @@ footer {
         </div>
 
         <!-- Club Line23 -->
-        <div class="spot-card">
+        <div class="spot-card" id="recommend">
           <div class="spot-card-header">
             <div class="spot-icon">👑</div>
             <div>
