@@ -790,6 +790,64 @@ footer {
   .section-tag { min-height: auto; }
   .section-tag::before, .section-tag::after { min-height: auto; display: inline; }
 }
+
+/* ── FAQ ACCORDION ── */
+.faq-item {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+.faq-question {
+  width: 100%;
+  background: #fff;
+  border: none;
+  padding: 16px 20px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--ink);
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-family: inherit;
+  line-height: 1.6;
+}
+.faq-question::after {
+  content: '+';
+  font-size: 1.2rem;
+  color: var(--orange);
+  flex-shrink: 0;
+}
+.faq-item.open .faq-question::after { content: '\2013'; }
+.faq-answer {
+  display: none;
+  padding: 0 20px 16px;
+  font-size: 0.9rem;
+  color: var(--ink-light);
+  line-height: 1.8;
+  background: #fff;
+}
+.faq-item.open .faq-answer { display: block; }
+@media(max-width:600px){
+  .faq-question { padding: 14px 16px; font-size: 0.88rem; }
+  .faq-answer { padding: 0 16px 14px; font-size: 0.84rem; }
+}
+
+/* ── RELATED GUIDES ── */
+.related-guides { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 32px 0 8px; }
+.related-guide {
+  display: block; padding: 20px 22px; text-decoration: none;
+  border: 1px solid var(--border); border-radius: 8px; background: #fff;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.related-guide:hover { border-color: var(--orange); transform: translateY(-2px); }
+.related-guide-label { font-size: 12px; letter-spacing: 0.08em; color: var(--orange); font-weight: 700; }
+.related-guide-title { font-size: 1.02rem; font-weight: 700; color: var(--ink); margin: 6px 0 8px; }
+.related-guide-text { font-size: 0.86rem; color: var(--ink-light); line-height: 1.7; }
+@media(max-width:600px){ .related-guides { grid-template-columns: 1fr; gap: 12px; } }
 </style>
 <script type="application/ld+json">
 {
@@ -973,7 +1031,6 @@ footer {
       <a href="#review">體驗分享</a>
       <a href="#recommend">推薦</a>
       <a href="japanese-kyabakura.html">日式陪酒吧</a>
-      <a href="nightlife-budget.html">預算指南</a>
     </nav>
   </div>
 </header>
@@ -1014,6 +1071,8 @@ footer {
           <li><a href="#review">真實體驗分享</a></li>
           <li><a href="#dinner">夜出發前：推薦晚餐地點</a></li>
           <li><a href="#shoplist">阿索克周邊 包廂式酒吧&卡拉OK 彙總</a></li>
+        
+          <li><a href="#faq">常見問題</a></li>
         </ol>
       </div>
 
@@ -1158,7 +1217,7 @@ footer {
         </div>
         <div class="spot-meta">
           <div class="spot-meta-item">🕗 20:00~次日1:00</div>
-          <div class="spot-meta-item">💰 2,500B起/人</div>
+          <div class="spot-meta-item">💰 2,000B起/人</div>
           <div class="spot-meta-item">👥 適合2~6人團體</div>
         </div>
       </div>
@@ -1505,6 +1564,104 @@ footer {
         1~2人想和可愛小姐姐輕鬆喝幾杯→Frontier。3人以上決定"今晚要搞大的"→Club Line23一擇。包廂×零距離×酒桌遊戲的威力超乎想象。
       </div>
 
+      <!-- Section: FAQ -->
+      <h2 id="faq">常見問題</h2>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" onclick="var o=this.parentElement.classList.toggle(&#39;open&#39;);this.setAttribute(&#39;aria-expanded&#39;,o)">
+            曼谷卡拉OK酒吧的價格大概是多少？
+          </button>
+          <div class="faq-answer">
+            價格因店鋪而異，標準套餐一般每人2,000–3,000泰銖（90分鐘）。VIP包廂和暢飲套餐約4,000–6,000泰銖。大多數店鋪另收10%服務費和7%增值稅。
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" onclick="var o=this.parentElement.classList.toggle(&#39;open&#39;);this.setAttribute(&#39;aria-expanded&#39;,o)">
+            曼谷有會說日語的卡拉OK酒吧嗎？
+          </button>
+          <div class="faq-answer">
+            有的，素坤逸區有多家日本人經營或配有日語工作人員的卡拉OK酒吧。尤其是素坤逸Soi 23附近，深受日本遊客歡迎。
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" onclick="var o=this.parentElement.classList.toggle(&#39;open&#39;);this.setAttribute(&#39;aria-expanded&#39;,o)">
+            曼谷的卡拉OK酒吧能用英語溝通嗎？
+          </button>
+          <div class="faq-answer">
+            素坤逸區的主要卡拉OK酒吧大多配有英語工作人員，外國遊客可以放心消費。建議提前確認是否支援英語服務。
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" onclick="var o=this.parentElement.classList.toggle(&#39;open&#39;);this.setAttribute(&#39;aria-expanded&#39;,o)">
+            曼谷的卡拉OK酒吧需要預約嗎？
+          </button>
+          <div class="faq-answer">
+            大多數店鋪無需預約即可進入，但週末和節假日較為擁擠，建議提前預約。許多店鋪接受LINE或WhatsApp預約。
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" onclick="var o=this.parentElement.classList.toggle(&#39;open&#39;);this.setAttribute(&#39;aria-expanded&#39;,o)">
+            曼谷哪個區域的卡拉OK酒吧最值得推薦？
+          </button>
+          <div class="faq-answer">
+            對於外國遊客，BTS Asok站和素坤逸站周邊（Soi 21–Soi 23）交通最便利，最值得推薦。該區域集中了大量支援日語和英語服務的店鋪，初次前往也能安心享受。
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" onclick="var o=this.parentElement.classList.toggle(&#39;open&#39;);this.setAttribute(&#39;aria-expanded&#39;,o)">
+            曼谷牛仔街（Soi Cowboy）怎麼去？
+          </button>
+          <div class="faq-answer">
+            從BTS Asok站或MRT素坤逸站步行約5分鐘即可到達，就在Terminal 21購物中心附近、素坤逸Soi 23一帶。從考山路搭計程車約70–90泰銖。
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" onclick="var o=this.parentElement.classList.toggle(&#39;open&#39;);this.setAttribute(&#39;aria-expanded&#39;,o)">
+            曼谷有會說中文的夜店或KTV嗎？
+          </button>
+          <div class="faq-answer">
+            有的。素坤逸Soi 23一帶有日式與中文服務的KTV、卡拉OK店，部分店家配有會說中文或日語的工作人員，初次前往也能安心。預約時可先確認中文對應情況。
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" onclick="var o=this.parentElement.classList.toggle(&#39;open&#39;);this.setAttribute(&#39;aria-expanded&#39;,o)">
+            曼谷的『日式酒店』和是隆(Thaniya)日本街有什麼不同？
+          </button>
+          <div class="faq-answer">
+            是隆(Thaniya)是曼谷老牌的日本街，以日本客為主；素坤逸23巷(Soi 23)則是近年崛起的阿索克(Asok)夜生活區，交通更方便，白天有話題大麻店、晚上有日式酒店，適合台灣自由行的順遊。想體驗林森北路條通式的日式接客（媽媽桑、指名、陪酒不賣身），素坤逸23巷的 Club LINE23 是台灣人容易上手的選擇。
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" onclick="var o=this.parentElement.classList.toggle(&#39;open&#39;);this.setAttribute(&#39;aria-expanded&#39;,o)">
+            去素坤逸23巷的 Golden Hour 大麻店，附近晚上還能去哪？
+          </button>
+          <div class="faq-answer">
+            Golden Hour 就在素坤逸23巷(Sukhumvit Soi 23)、BTS阿索克(Asok)站步行可達。逛完草店後，沿同一條巷就能轉場夜生活：包廂卡拉OK、酒吧，以及日式酒店 Club LINE23（陪酒·VIP包廂、日語英語可通）。白天微醺、深夜熱鬧，一條巷玩到底。（大麻相關場所僅限20歲以上。）
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" onclick="var o=this.parentElement.classList.toggle(&#39;open&#39;);this.setAttribute(&#39;aria-expanded&#39;,o)">
+            曼谷的日式酒店會說中文嗎？台灣人去會不會有障礙？
+          </button>
+          <div class="faq-answer">
+            素坤逸23巷一帶的日式酒店多半日語·英語可通，部分店家也有中文對應。以 Club LINE23 為例，常駐日本人工作人員、可用日語與英語溝通，消費方式與台灣條通的日式酒店相近（陪酒不賣身、可指名），台灣旅客通常很快就能上手。
+          </div>
+        </div>
+
+      <!-- Related guides -->
+      <h2 id="guides">延伸閱讀</h2>
+      <div class="related-guides">
+        <a class="related-guide" href="/zh-Hant/nightlife-budget.html">
+          <div class="related-guide-label">01</div>
+          <div class="related-guide-title">預算指南</div>
+          <div class="related-guide-text">在阿索克玩一晚究竟要花多少，逐項算給你看。</div>
+        </a>
+        <a class="related-guide" href="/zh-Hant/nightlife-scams.html">
+          <div class="related-guide-label">02</div>
+          <div class="related-guide-title">避雷指南</div>
+          <div class="related-guide-text">外國人會踩的四個雷，以及怎麼避開。</div>
+        </a>
+      </div>
+
       <!-- Final CTA -->
       <div class="final-cta">
         <div class="final-cta-eyebrow">今晚的計劃</div>
@@ -1571,7 +1728,7 @@ footer {
     </div>
     <div class="footer-text" style="margin-top:16px; font-size:11px; letter-spacing:0.04em;">
       <strong style="color:var(--gold)">其他語言版本：</strong>
-      <a href="/en/" hreflang="en" style="color:var(--ink); margin: 0 8px; text-decoration: underline;">English</a>
+      <a href="/" hreflang="en" style="color:var(--ink); margin: 0 8px; text-decoration: underline;">English</a>
       <a href="/ja/" hreflang="ja" style="color:var(--ink); margin: 0 8px; text-decoration: underline;">日本語</a>
       <a href="/ko/" hreflang="ko" style="color:var(--ink); margin: 0 8px; text-decoration: underline;">한국어</a>
     </div>

@@ -12,23 +12,23 @@
 <meta name="keywords" content="Asok nightlife, Soi Cowboy, Bangkok nightlife guide, Sukhumvit nightlife, Bangkok go-go bars, private karaoke Bangkok, Bangkok guys trip, Soi 23 bars, Bangkok nightlife 2026">
 
 <!-- Canonical & Hreflang -->
-<link rel="canonical" href="https://bangkoknightguide.com/en/">
+<link rel="canonical" href="https://bangkoknightguide.com/">
 <link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon-96.png">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
-<link rel="alternate" hreflang="en" href="https://bangkoknightguide.com/en/">
+<link rel="alternate" hreflang="en" href="https://bangkoknightguide.com/">
 <link rel="alternate" hreflang="ja" href="https://bangkoknightguide.com/ja/">
 <link rel="alternate" hreflang="ko" href="https://bangkoknightguide.com/ko/">
 <link rel="alternate" hreflang="zh-Hans" href="https://bangkoknightguide.com/zh/">
 <link rel="alternate" hreflang="zh-Hant" href="https://bangkoknightguide.com/zh-Hant/">
-<link rel="alternate" hreflang="x-default" href="https://bangkoknightguide.com/en/">
+<link rel="alternate" hreflang="x-default" href="https://bangkoknightguide.com/">
 
 <!-- Open Graph -->
 <meta property="og:type" content="article">
 <meta property="og:title" content="Asok Nightlife Guide 2026 | Soi Cowboy, Go-Go Bars & Karaoke">
 <meta property="og:description" content="The complete guide to Bangkok Asok nightlife. Honest reviews of Soi Cowboy, go-go bars, private karaoke rooms, and snack bars. Best spots for group travelers.">
-<meta property="og:url" content="https://bangkoknightguide.com/en/">
+<meta property="og:url" content="https://bangkoknightguide.com/">
 <meta property="og:site_name" content="Bangkok Night Guide">
 <meta property="og:image" content="https://bangkoknightguide.com/assets/og/og-nightlife-en.png">
 <meta property="og:image:secure_url" content="https://bangkoknightguide.com/assets/og/og-nightlife-en.png">
@@ -40,6 +40,7 @@
 <meta property="og:locale:alternate" content="ja_JP">
 <meta property="og:locale:alternate" content="ko_KR">
 <meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="zh_TW">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
@@ -55,7 +56,7 @@
   "@type": "Article",
   "headline": "Asok Nightlife Guide 2026 – Soi Cowboy, Go-Go Bars & Karaoke in Bangkok",
   "description": "The complete 2026 guide to Bangkok Asok nightlife. Honest reviews of Soi Cowboy go-go bars, private karaoke rooms, snack bars near Sukhumvit Soi 23.",
-  "url": "https://bangkoknightguide.com/en/",
+  "url": "https://bangkoknightguide.com/",
   "inLanguage": "en",
   "datePublished": "2026-01-01",
   "dateModified": "2026-09-02",
@@ -72,7 +73,7 @@
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://bangkoknightguide.com/en/"
+    "@id": "https://bangkoknightguide.com/"
   },
   "about": [
     {
@@ -789,6 +790,64 @@ footer {
   .section-tag { min-height: auto; }
   .section-tag::before, .section-tag::after { min-height: auto; display: inline; }
 }
+
+/* ── FAQ ACCORDION ── */
+.faq-item {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+.faq-question {
+  width: 100%;
+  background: #fff;
+  border: none;
+  padding: 16px 20px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--ink);
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-family: inherit;
+  line-height: 1.6;
+}
+.faq-question::after {
+  content: '+';
+  font-size: 1.2rem;
+  color: var(--orange);
+  flex-shrink: 0;
+}
+.faq-item.open .faq-question::after { content: '\2013'; }
+.faq-answer {
+  display: none;
+  padding: 0 20px 16px;
+  font-size: 0.9rem;
+  color: var(--ink-light);
+  line-height: 1.8;
+  background: #fff;
+}
+.faq-item.open .faq-answer { display: block; }
+@media(max-width:600px){
+  .faq-question { padding: 14px 16px; font-size: 0.88rem; }
+  .faq-answer { padding: 0 16px 14px; font-size: 0.84rem; }
+}
+
+/* ── RELATED GUIDES ── */
+.related-guides { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 32px 0 8px; }
+.related-guide {
+  display: block; padding: 20px 22px; text-decoration: none;
+  border: 1px solid var(--border); border-radius: 8px; background: #fff;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.related-guide:hover { border-color: var(--orange); transform: translateY(-2px); }
+.related-guide-label { font-size: 12px; letter-spacing: 0.08em; color: var(--orange); font-weight: 700; }
+.related-guide-title { font-size: 1.02rem; font-weight: 700; color: var(--ink); margin: 6px 0 8px; }
+.related-guide-text { font-size: 0.86rem; color: var(--ink-light); line-height: 1.7; }
+@media(max-width:600px){ .related-guides { grid-template-columns: 1fr; gap: 12px; } }
 </style>
 <script type="application/ld+json">
 {
@@ -932,7 +991,6 @@ footer {
       <a href="#review">Reviews</a>
       <a href="#recommend">Top Pick</a>
       <a href="japanese-kyabakura.html">Japanese Hostess Bars</a>
-      <a href="nightlife-budget.html">Budget</a>
     </nav>
   </div>
 </header>
@@ -972,6 +1030,8 @@ footer {
           <li><a href="#review">Real Visitor Experiences</a></li>
           <li><a href="#dinner">Before You Head Out: Recommended Dinner Spots</a></li>
           <li><a href="#shoplist">Private-Room Snack Bars & Karaoke around Asok</a></li>
+        
+          <li><a href="#faq">Frequently asked questions</a></li>
         </ol>
       </div>
 
@@ -1116,7 +1176,7 @@ footer {
         </div>
         <div class="spot-meta">
           <div class="spot-meta-item">🕗 8:00 PM – 1:00 AM</div>
-          <div class="spot-meta-item">💰 From 2,500 THB / person</div>
+          <div class="spot-meta-item">💰 From 2,000 THB / person</div>
           <div class="spot-meta-item">👥 Best for groups of 2–6</div>
         </div>
       </div>
@@ -1399,6 +1459,64 @@ footer {
       <div class="callout callout-tip">
         <strong>💡 How to Choose:</strong>
         For a casual drink with cute girls (1–2 people), Frontier. For groups of 3+ who've decided "tonight's going to be epic," Club Line23 is the only answer. The combination of private rooms, close contact, and party games hits harder than you'd imagine.
+      </div>
+
+      <!-- Section: FAQ -->
+      <h2 id="faq">Frequently asked questions</h2>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" onclick="var o=this.parentElement.classList.toggle(&#39;open&#39;);this.setAttribute(&#39;aria-expanded&#39;,o)">
+            How much does a karaoke bar in Bangkok cost?
+          </button>
+          <div class="faq-answer">
+            Prices vary by venue, but standard plans typically cost 2,000–3,000 baht per person for 90 minutes. VIP rooms and all-you-can-drink packages range from 4,000–6,000 baht. Most venues add a 10% service charge and 7% VAT.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" onclick="var o=this.parentElement.classList.toggle(&#39;open&#39;);this.setAttribute(&#39;aria-expanded&#39;,o)">
+            Are there karaoke bars in Bangkok with Japanese-speaking staff?
+          </button>
+          <div class="faq-answer">
+            Yes, the Sukhumvit area has several karaoke bars that are Japanese-owned or have Japanese-speaking staff on site. The area around Sukhumvit Soi 23 is particularly popular with Japanese visitors.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" onclick="var o=this.parentElement.classList.toggle(&#39;open&#39;);this.setAttribute(&#39;aria-expanded&#39;,o)">
+            Can I communicate in English at Bangkok karaoke bars?
+          </button>
+          <div class="faq-answer">
+            Most major karaoke bars in the Sukhumvit area have English-speaking staff, making them accessible for international tourists. It's recommended to confirm English availability when booking.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" onclick="var o=this.parentElement.classList.toggle(&#39;open&#39;);this.setAttribute(&#39;aria-expanded&#39;,o)">
+            Do I need a reservation for karaoke bars in Bangkok?
+          </button>
+          <div class="faq-answer">
+            Walk-ins are accepted at most venues, but weekends and holidays can get busy, so advance reservations are recommended. Many bars accept bookings via LINE or WhatsApp.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" onclick="var o=this.parentElement.classList.toggle(&#39;open&#39;);this.setAttribute(&#39;aria-expanded&#39;,o)">
+            Which area in Bangkok is best for karaoke bars?
+          </button>
+          <div class="faq-answer">
+            For international visitors, the area around BTS Asok and Sukhumvit stations (Soi 21–Soi 23) is the most convenient and recommended. It has a high concentration of venues with Japanese and English-speaking staff, making it ideal for first-timers.
+          </div>
+        </div>
+
+      <!-- Related guides -->
+      <h2 id="guides">Related guides</h2>
+      <div class="related-guides">
+        <a class="related-guide" href="/en/nightlife-budget.html">
+          <div class="related-guide-label">01</div>
+          <div class="related-guide-title">Budget Guide</div>
+          <div class="related-guide-text">What a night in Asok actually costs, broken down line by line.</div>
+        </a>
+        <a class="related-guide" href="/en/nightlife-scams.html">
+          <div class="related-guide-label">02</div>
+          <div class="related-guide-title">Avoiding Trouble</div>
+          <div class="related-guide-text">The four things that catch foreign visitors out, and how to avoid them.</div>
+        </a>
       </div>
 
       <!-- Final CTA -->

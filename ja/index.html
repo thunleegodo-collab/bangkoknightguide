@@ -40,6 +40,7 @@
 <meta property="og:locale:alternate" content="en_US">
 <meta property="og:locale:alternate" content="ko_KR">
 <meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="zh_TW">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
@@ -286,6 +287,64 @@ header {
   .hero h1 { font-size: 1.7rem; }
   .page-wrap { padding: 36px 20px; }
 }
+
+/* ── FAQ ACCORDION ── */
+.faq-item {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+.faq-question {
+  width: 100%;
+  background: #fff;
+  border: none;
+  padding: 16px 20px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--ink);
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-family: inherit;
+  line-height: 1.6;
+}
+.faq-question::after {
+  content: '+';
+  font-size: 1.2rem;
+  color: var(--orange);
+  flex-shrink: 0;
+}
+.faq-item.open .faq-question::after { content: '\2013'; }
+.faq-answer {
+  display: none;
+  padding: 0 20px 16px;
+  font-size: 0.9rem;
+  color: var(--ink-light);
+  line-height: 1.8;
+  background: #fff;
+}
+.faq-item.open .faq-answer { display: block; }
+@media(max-width:600px){
+  .faq-question { padding: 14px 16px; font-size: 0.88rem; }
+  .faq-answer { padding: 0 16px 14px; font-size: 0.84rem; }
+}
+
+/* ── RELATED GUIDES ── */
+.related-guides { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 32px 0 8px; }
+.related-guide {
+  display: block; padding: 20px 22px; text-decoration: none;
+  border: 1px solid var(--border); border-radius: 8px; background: #fff;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.related-guide:hover { border-color: var(--orange); transform: translateY(-2px); }
+.related-guide-label { font-size: 12px; letter-spacing: 0.08em; color: var(--orange); font-weight: 700; }
+.related-guide-title { font-size: 1.02rem; font-weight: 700; color: var(--ink); margin: 6px 0 8px; }
+.related-guide-text { font-size: 0.86rem; color: var(--ink-light); line-height: 1.7; }
+@media(max-width:600px){ .related-guides { grid-template-columns: 1fr; gap: 12px; } }
 </style>
 <script type="application/ld+json">
 {
@@ -429,7 +488,6 @@ header {
       <a href="#review">体験談</a>
       <a href="#recommend">おすすめ</a>
       <a href="../japanese-kyabakura.html">日本人キャバクラ</a>
-      <a href="nightlife-budget.html">予算ガイド</a>
     </nav>
   </div>
 </header>
@@ -469,6 +527,8 @@ header {
           <li><a href="#review">実際の体験談</a></li>
           <li><a href="#dinner">夜の出発前に：おすすめ夕食スポット</a></li>
           <li><a href="#shoplist">アソーク周辺スナック・カラオケまとめ</a></li>
+        
+          <li><a href="#faq">よくある質問</a></li>
         </ol>
       </div>
 
@@ -613,7 +673,7 @@ header {
         </div>
         <div class="spot-meta">
           <div class="spot-meta-item">🕗 20:00〜翌1:00</div>
-          <div class="spot-meta-item">💰 2,500B〜/人</div>
+          <div class="spot-meta-item">💰 2,000B〜/人</div>
           <div class="spot-meta-item">👥 2〜6人グループ向き</div>
         </div>
       </div>
@@ -898,6 +958,64 @@ header {
         1〜2人で可愛い子と気軽に飲みたいなら Frontier。3人以上で「今夜はヤバい夜にする」と決めたなら Club Line23 一択。個室×密着×飲み会ゲームの破壊力は想像以上です。
       </div>
 
+      <!-- Section: FAQ -->
+      <h2 id="faq">よくある質問</h2>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" onclick="var o=this.parentElement.classList.toggle(&#39;open&#39;);this.setAttribute(&#39;aria-expanded&#39;,o)">
+            バンコクのカラオケバーの料金相場はいくらですか？
+          </button>
+          <div class="faq-answer">
+            バンコクのカラオケバーは店舗によって異なりますが、一般的にスタンダードプランで1人2,000〜3,000バーツ（90分）が相場です。VIPルームや飲み放題プランは4,000〜6,000バーツ程度。別途サービス料10%・VAT7%がかかる店舗がほとんどです。
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" onclick="var o=this.parentElement.classList.toggle(&#39;open&#39;);this.setAttribute(&#39;aria-expanded&#39;,o)">
+            バンコクで日本語が通じるカラオケバーはありますか？
+          </button>
+          <div class="faq-answer">
+            はい、スクンビットエリアには日本人経営または日本語スタッフが常駐するカラオケバーが複数あります。特にスクンビットSoi23周辺は日本人に人気のエリアです。
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" onclick="var o=this.parentElement.classList.toggle(&#39;open&#39;);this.setAttribute(&#39;aria-expanded&#39;,o)">
+            バンコクのカラオケバーで英語は通じますか？
+          </button>
+          <div class="faq-answer">
+            スクンビットエリアの主要なカラオケバーでは英語対応スタッフが在籍していることが多く、外国人観光客も安心して利用できます。事前に英語対応可否を確認することをおすすめします。
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" onclick="var o=this.parentElement.classList.toggle(&#39;open&#39;);this.setAttribute(&#39;aria-expanded&#39;,o)">
+            バンコクのカラオケバーは予約が必要ですか？
+          </button>
+          <div class="faq-answer">
+            予約なしでも入店できる店舗がほとんどですが、週末や祝日は混雑するため事前予約がおすすめです。LINEやWhatsAppで予約を受け付けている店舗が多いです。
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" onclick="var o=this.parentElement.classList.toggle(&#39;open&#39;);this.setAttribute(&#39;aria-expanded&#39;,o)">
+            バンコクのカラオケバーはどのエリアがおすすめですか？
+          </button>
+          <div class="faq-answer">
+            外国人観光客には、BTSアソーク駅・スクンビット駅周辺（Soi21〜Soi23）が最もアクセスしやすくおすすめです。日本語・英語対応の店舗が集中しており、初めての方でも安心して楽しめます。
+          </div>
+        </div>
+
+      <!-- Related guides -->
+      <h2 id="guides">関連ガイド</h2>
+      <div class="related-guides">
+        <a class="related-guide" href="/ja/nightlife-budget.html">
+          <div class="related-guide-label">01</div>
+          <div class="related-guide-title">予算ガイド</div>
+          <div class="related-guide-text">アソークで1晩いくらかかるのか、費目別に全部出しています。</div>
+        </a>
+        <a class="related-guide" href="/ja/nightlife-scams.html">
+          <div class="related-guide-label">02</div>
+          <div class="related-guide-title">トラブル回避</div>
+          <div class="related-guide-text">外国人が引っかかる4つのトラブルと、その避け方。</div>
+        </a>
+      </div>
+
       <!-- Final CTA -->
       <div class="final-cta">
         <div class="final-cta-eyebrow">今夜のプラン</div>
@@ -964,7 +1082,7 @@ header {
     </div>
     <div class="footer-text" style="margin-top:16px; font-size:11px; letter-spacing:0.04em;">
       <strong style="color:var(--gold)">他の言語で読む:</strong>
-      <a href="/en/" hreflang="en" style="color:var(--ink); margin: 0 8px; text-decoration: underline;">English</a>
+      <a href="/" hreflang="en" style="color:var(--ink); margin: 0 8px; text-decoration: underline;">English</a>
       <a href="/ko/" hreflang="ko" style="color:var(--ink); margin: 0 8px; text-decoration: underline;">한국어</a>
       <a href="/zh/" hreflang="zh-Hans" style="color:var(--ink); margin: 0 8px; text-decoration: underline;">中文</a>
       <a href="/zh-Hant/" hreflang="zh-Hant" style="color:var(--ink); margin: 0 8px; text-decoration: underline;">繁體中文</a>

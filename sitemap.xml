@@ -26,18 +26,6 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://bangkoknightguide.com/en/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://bangkoknightguide.com/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://bangkoknightguide.com/ja/"/>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://bangkoknightguide.com/ko/"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bangkoknightguide.com/zh/"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://bangkoknightguide.com/zh-Hant/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://bangkoknightguide.com/"/>
-    <lastmod>2026-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
     <loc>https://bangkoknightguide.com/ko/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://bangkoknightguide.com/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://bangkoknightguide.com/ja/"/>
@@ -189,6 +177,66 @@
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bangkoknightguide.com/zh/nightlife-budget.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://bangkoknightguide.com/zh-Hant/nightlife-budget.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://bangkoknightguide.com/en/nightlife-budget.html"/>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bangkoknightguide.com/en/nightlife-scams.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bangkoknightguide.com/en/nightlife-scams.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bangkoknightguide.com/ja/nightlife-scams.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bangkoknightguide.com/ko/nightlife-scams.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bangkoknightguide.com/zh/nightlife-scams.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://bangkoknightguide.com/zh-Hant/nightlife-scams.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bangkoknightguide.com/en/nightlife-scams.html"/>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bangkoknightguide.com/ja/nightlife-scams.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bangkoknightguide.com/en/nightlife-scams.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bangkoknightguide.com/ja/nightlife-scams.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bangkoknightguide.com/ko/nightlife-scams.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bangkoknightguide.com/zh/nightlife-scams.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://bangkoknightguide.com/zh-Hant/nightlife-scams.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bangkoknightguide.com/en/nightlife-scams.html"/>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bangkoknightguide.com/ko/nightlife-scams.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bangkoknightguide.com/en/nightlife-scams.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bangkoknightguide.com/ja/nightlife-scams.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bangkoknightguide.com/ko/nightlife-scams.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bangkoknightguide.com/zh/nightlife-scams.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://bangkoknightguide.com/zh-Hant/nightlife-scams.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bangkoknightguide.com/en/nightlife-scams.html"/>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bangkoknightguide.com/zh/nightlife-scams.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bangkoknightguide.com/en/nightlife-scams.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bangkoknightguide.com/ja/nightlife-scams.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bangkoknightguide.com/ko/nightlife-scams.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bangkoknightguide.com/zh/nightlife-scams.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://bangkoknightguide.com/zh-Hant/nightlife-scams.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bangkoknightguide.com/en/nightlife-scams.html"/>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bangkoknightguide.com/zh-Hant/nightlife-scams.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bangkoknightguide.com/en/nightlife-scams.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://bangkoknightguide.com/ja/nightlife-scams.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://bangkoknightguide.com/ko/nightlife-scams.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bangkoknightguide.com/zh/nightlife-scams.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://bangkoknightguide.com/zh-Hant/nightlife-scams.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bangkoknightguide.com/en/nightlife-scams.html"/>
     <lastmod>2026-09-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
