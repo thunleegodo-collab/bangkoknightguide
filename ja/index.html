@@ -59,7 +59,7 @@
   "url": "https://bangkoknightguide.com/ja/",
   "inLanguage": "ja",
   "datePublished": "2026-01-01",
-  "dateModified": "2026-09-02",
+  "dateModified": "2026-09-03",
   "publisher": {
     "@type": "Organization",
     "name": "Bangkok Night Guide",
@@ -345,6 +345,36 @@ header {
 .related-guide-title { font-size: 1.02rem; font-weight: 700; color: var(--ink); margin: 6px 0 8px; }
 .related-guide-text { font-size: 0.86rem; color: var(--ink-light); line-height: 1.7; }
 @media(max-width:600px){ .related-guides { grid-template-columns: 1fr; gap: 12px; } }
+
+/* ── AREA MAP ── */
+.area-map-wrap {
+  margin: 28px 0 8px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+  overflow: hidden;
+}
+/* the article column is a grid item, whose automatic minimum size is its
+   min-content width; without this the map's min-width would widen the page */
+.content-grid > .article-body { min-width: 0; }
+.area-map-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; max-width: 100%; }
+.area-map { display: block; width: 100%; min-width: 660px; height: auto; }
+.area-map text { font-family: inherit; }
+.area-map-caption {
+  padding: 12px 18px 14px;
+  border-top: 1px solid var(--border);
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+.area-map-scroll:focus-visible { outline: 2px solid var(--orange); outline-offset: -2px; }
+.area-map-hint { font-weight: 700; color: var(--orange); }
+.area-map-wrap { position: relative; }
+.area-map-wrap::after {
+  content: ""; position: absolute; top: 0; right: 0; width: 44px; bottom: 56px;
+  background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.92));
+  pointer-events: none;
+}
 </style>
 <script type="application/ld+json">
 {
@@ -614,6 +644,12 @@ header {
       <!-- Section 1 -->
       <h2 id="area">アソーク周辺の夜遊びエリア</h2>
       <p>BTSアソーク駅を降りた瞬間、空気が変わります。ネオンの光、甘い香り、どこからか聞こえる重低音――徒歩10分圏内にバンコク屈指の歓楽スポットが密集するこのエリアは、まさに「大人のテーマパーク」。まずは地理を頭に入れて、最高の夜を効率よく攻めましょう。</p>
+
+
+      <figure class="area-map-wrap">
+        <div class="area-map-scroll" tabindex="0" role="group" aria-label="アソーク周辺エリアマップ"><svg class="area-map" viewBox="0 62 800 424" aria-labelledby="map-t map-d" xmlns="http://www.w3.org/2000/svg"><title id="map-t">アソーク周辺エリアマップ</title><desc id="map-d">BTSアソーク駅・MRTスクンビット駅・ターミナル21・ソイカウボーイ・ソイ23・Club LINE23 の位置関係を示した概念図。</desc><defs><marker id="arw" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#e85d26"/></marker></defs><rect x="0" y="62" width="800" height="424" fill="#fafaf8"/><rect x="0" y="336" width="800" height="44" fill="#e9e9f1" stroke="#dcdce8"/><rect x="136" y="30" width="36" height="430" fill="#e9e9f1" stroke="#dcdce8"/><line x1="508" y1="352" x2="556" y2="100" stroke="#e9e9f1" stroke-width="36" stroke-linecap="round"/><line x1="508" y1="352" x2="556" y2="100" stroke="#dcdce8" stroke-width="36" stroke-linecap="round" fill="none" opacity="0.35"/><line x1="172" y1="240" x2="528" y2="240" stroke="#e9e9f1" stroke-width="28" stroke-linecap="round"/><rect x="26" y="222" width="106" height="84" rx="6" fill="#eef0f8" stroke="#d4d4e2"/><text x="79" y="268" text-anchor="middle" font-size="13" fill="#1a1a2e" font-weight="700">ターミナル21</text><text x="690" y="364" text-anchor="middle" font-size="15" fill="#7a7a9a">スクンビット通り</text><text transform="translate(154 168) rotate(-90)" text-anchor="middle" font-size="14" fill="#7a7a9a">アソーク通り（Soi 21）</text><text transform="translate(592 214) rotate(-78)" text-anchor="middle" font-size="15" fill="#7a7a9a">ソイ23</text><text x="330" y="246" text-anchor="middle" font-size="16" fill="#1a1a2e" font-weight="700">ソイカウボーイ</text><text x="14" y="326" font-size="13" fill="#7a7a9a">← ナナ方面</text><text x="786" y="326" text-anchor="end" font-size="13" fill="#7a7a9a">トンロー方面 →</text><path d="M154,406 L154,358 L506,358 L541,178" fill="none" stroke="#e85d26" stroke-width="4" stroke-dasharray="11 7" stroke-linecap="round" marker-end="url(#arw)"/><circle cx="154" cy="358" r="7" fill="#fff" stroke="#1a1a2e" stroke-width="3"/><g><rect x="86.2" y="409.0" width="135.6" height="30.0" rx="15.0" fill="#ffffff" stroke="#d4d4e2"/><text x="154.0" y="429.4" text-anchor="middle" font-size="15" fill="#3d3d5c" font-weight="700">BTS アソーク駅</text></g><circle cx="154" cy="300" r="6" fill="#fff" stroke="#1a1a2e" stroke-width="3"/><g><rect x="185.2" y="285.0" width="165.6" height="30.0" rx="15.0" fill="#ffffff" stroke="#d4d4e2"/><text x="268.0" y="305.4" text-anchor="middle" font-size="15" fill="#3d3d5c" font-weight="700">MRT スクンビット駅</text></g><line x1="161" y1="300" x2="185" y2="300" stroke="#c9c9d8" stroke-width="1.5"/><circle cx="519" cy="288" r="6" fill="#fff" stroke="#1a1a2e" stroke-width="3"/><g><rect x="584.0" y="273.5" width="156.0" height="29.0" rx="14.5" fill="#ffffff" stroke="#d4d4e2"/><text x="662.0" y="293.0" text-anchor="middle" font-size="14" fill="#3d3d5c">バービア・スナック</text></g><line x1="527" y1="288" x2="584" y2="288" stroke="#c9c9d8" stroke-width="1.5"/><a href="#shoplist" aria-label="Club LINE23"><circle cx="546" cy="152" r="9" fill="#e85d26"/><circle cx="546" cy="152" r="15" fill="none" stroke="#e85d26" stroke-width="2" opacity="0.45"/><g><rect x="589.2" y="137.0" width="121.5" height="30.0" rx="15.0" fill="#fff4ef" stroke="#e85d26"/><text x="650.0" y="157.4" text-anchor="middle" font-size="15" fill="#b8471a" font-weight="700">Club LINE23</text></g></a><g><rect x="199.7" y="190.0" width="76.5" height="28.0" rx="14.0" fill="#fff" stroke="#e2e2ec"/><text x="238.0" y="208.7" text-anchor="middle" font-size="13" fill="#7a7a9a">徒歩3分</text></g><g><rect x="385.7" y="282.0" width="76.5" height="28.0" rx="14.0" fill="#fff" stroke="#e2e2ec"/><text x="424.0" y="300.7" text-anchor="middle" font-size="13" fill="#7a7a9a">徒歩5分</text></g><g><rect x="601.7" y="92.0" width="76.5" height="28.0" rx="14.0" fill="#fff4ef" stroke="#f0c3ab"/><text x="640.0" y="110.7" text-anchor="middle" font-size="13" fill="#b8471a">徒歩7分</text></g><g opacity="0.55"><path d="M62,132 L70,110 L78,132 L70,126 Z" fill="#7a7a9a"/><text x="70" y="150" text-anchor="middle" font-size="12" fill="#7a7a9a" font-weight="700">N</text></g><line x1="44" y1="466" x2="76" y2="466" stroke="#e85d26" stroke-width="4" stroke-dasharray="11 7" stroke-linecap="round"/><text x="86" y="471" font-size="13" fill="#7a7a9a">BTSアソーク駅からの徒歩ルート</text></svg></div>
+        <figcaption class="area-map-caption"><span class="area-map-hint">→ 横にスクロールできます　</span>※ 位置関係を示す概念図です。縮尺は正確ではありません。徒歩分数はBTSアソーク駅からの目安で、信号待ちや通りの混雑で前後します。ソイカウボーイはソイ21とソイ23を結ぶ約150mの路地です。通りの向きも簡略化しています。</figcaption>
+      </figure>
 
       <div class="spot-card">
         <div class="spot-card-header">

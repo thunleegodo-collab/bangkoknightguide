@@ -59,7 +59,7 @@
   "url": "https://bangkoknightguide.com/",
   "inLanguage": "en",
   "datePublished": "2026-01-01",
-  "dateModified": "2026-09-02",
+  "dateModified": "2026-09-03",
   "publisher": {
     "@type": "Organization",
     "name": "Bangkok Night Guide",
@@ -948,6 +948,36 @@ footer {
 .related-guide-title { font-size: 1.02rem; font-weight: 700; color: var(--ink); margin: 6px 0 8px; }
 .related-guide-text { font-size: 0.86rem; color: var(--ink-light); line-height: 1.7; }
 @media(max-width:600px){ .related-guides { grid-template-columns: 1fr; gap: 12px; } }
+
+/* ── AREA MAP ── */
+.area-map-wrap {
+  margin: 28px 0 8px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+  overflow: hidden;
+}
+/* the article column is a grid item, whose automatic minimum size is its
+   min-content width; without this the map's min-width would widen the page */
+.content-grid > .article-body { min-width: 0; }
+.area-map-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; max-width: 100%; }
+.area-map { display: block; width: 100%; min-width: 660px; height: auto; }
+.area-map text { font-family: inherit; }
+.area-map-caption {
+  padding: 12px 18px 14px;
+  border-top: 1px solid var(--border);
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+.area-map-scroll:focus-visible { outline: 2px solid var(--orange); outline-offset: -2px; }
+.area-map-hint { font-weight: 700; color: var(--orange); }
+.area-map-wrap { position: relative; }
+.area-map-wrap::after {
+  content: ""; position: absolute; top: 0; right: 0; width: 44px; bottom: 56px;
+  background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.92));
+  pointer-events: none;
+}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-L3F0B833S2"></script>
@@ -1109,6 +1139,12 @@ footer {
       <!-- Section 1 -->
       <h2 id="area">Nightlife Areas Around Asok</h2>
       <p>Step off at BTS Asok station and you'll find Bangkok's most iconic nightlife spots all within a 10-minute walk. If you want to make the most of Bangkok after dark, getting the lay of this area first will make everything easier.</p>
+
+
+      <figure class="area-map-wrap">
+        <div class="area-map-scroll" tabindex="0" role="group" aria-label="Asok area map"><svg class="area-map" viewBox="0 62 800 424" aria-labelledby="map-t map-d" xmlns="http://www.w3.org/2000/svg"><title id="map-t">Asok area map</title><desc id="map-d">Schematic showing BTS Asok, MRT Sukhumvit, Terminal 21, Soi Cowboy, Soi 23 and Club LINE23.</desc><defs><marker id="arw" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#e85d26"/></marker></defs><rect x="0" y="62" width="800" height="424" fill="#fafaf8"/><rect x="0" y="336" width="800" height="44" fill="#e9e9f1" stroke="#dcdce8"/><rect x="136" y="30" width="36" height="430" fill="#e9e9f1" stroke="#dcdce8"/><line x1="508" y1="352" x2="556" y2="100" stroke="#e9e9f1" stroke-width="36" stroke-linecap="round"/><line x1="508" y1="352" x2="556" y2="100" stroke="#dcdce8" stroke-width="36" stroke-linecap="round" fill="none" opacity="0.35"/><line x1="172" y1="240" x2="528" y2="240" stroke="#e9e9f1" stroke-width="28" stroke-linecap="round"/><rect x="26" y="222" width="106" height="84" rx="6" fill="#eef0f8" stroke="#d4d4e2"/><text x="79" y="258" text-anchor="middle" font-size="13" fill="#1a1a2e" font-weight="700">Terminal</text><text x="79" y="278" text-anchor="middle" font-size="13" fill="#1a1a2e" font-weight="700">21</text><text x="690" y="364" text-anchor="middle" font-size="15" fill="#7a7a9a">Sukhumvit Road</text><text transform="translate(154 168) rotate(-90)" text-anchor="middle" font-size="14" fill="#7a7a9a">Asok Montri Rd (Soi 21)</text><text transform="translate(592 214) rotate(-78)" text-anchor="middle" font-size="15" fill="#7a7a9a">Soi 23</text><text x="330" y="246" text-anchor="middle" font-size="16" fill="#1a1a2e" font-weight="700">Soi Cowboy</text><text x="14" y="326" font-size="13" fill="#7a7a9a">← To Nana</text><text x="786" y="326" text-anchor="end" font-size="13" fill="#7a7a9a">To Thonglor →</text><path d="M154,406 L154,358 L506,358 L541,178" fill="none" stroke="#e85d26" stroke-width="4" stroke-dasharray="11 7" stroke-linecap="round" marker-end="url(#arw)"/><circle cx="154" cy="358" r="7" fill="#fff" stroke="#1a1a2e" stroke-width="3"/><g><rect x="106.3" y="409.0" width="95.4" height="30.0" rx="15.0" fill="#ffffff" stroke="#d4d4e2"/><text x="154.0" y="429.4" text-anchor="middle" font-size="15" fill="#3d3d5c" font-weight="700">BTS Asok</text></g><circle cx="154" cy="300" r="6" fill="#fff" stroke="#1a1a2e" stroke-width="3"/><g><rect x="198.6" y="285.0" width="138.9" height="30.0" rx="15.0" fill="#ffffff" stroke="#d4d4e2"/><text x="268.0" y="305.4" text-anchor="middle" font-size="15" fill="#3d3d5c" font-weight="700">MRT Sukhumvit</text></g><line x1="161" y1="300" x2="199" y2="300" stroke="#c9c9d8" stroke-width="1.5"/><circle cx="519" cy="288" r="6" fill="#fff" stroke="#1a1a2e" stroke-width="3"/><g><rect x="565.5" y="273.5" width="193.0" height="29.0" rx="14.5" fill="#ffffff" stroke="#d4d4e2"/><text x="662.0" y="293.0" text-anchor="middle" font-size="14" fill="#3d3d5c">Beer bars &amp; snack bars</text></g><line x1="527" y1="288" x2="566" y2="288" stroke="#c9c9d8" stroke-width="1.5"/><a href="#shoplist" aria-label="Club LINE23"><circle cx="546" cy="152" r="9" fill="#e85d26"/><circle cx="546" cy="152" r="15" fill="none" stroke="#e85d26" stroke-width="2" opacity="0.45"/><g><rect x="589.2" y="137.0" width="121.5" height="30.0" rx="15.0" fill="#fff4ef" stroke="#e85d26"/><text x="650.0" y="157.4" text-anchor="middle" font-size="15" fill="#b8471a" font-weight="700">Club LINE23</text></g></a><g><rect x="188.9" y="190.0" width="98.1" height="28.0" rx="14.0" fill="#fff" stroke="#e2e2ec"/><text x="238.0" y="208.7" text-anchor="middle" font-size="13" fill="#7a7a9a">3 min walk</text></g><g><rect x="374.9" y="282.0" width="98.1" height="28.0" rx="14.0" fill="#fff" stroke="#e2e2ec"/><text x="424.0" y="300.7" text-anchor="middle" font-size="13" fill="#7a7a9a">5 min walk</text></g><g><rect x="590.9" y="92.0" width="98.1" height="28.0" rx="14.0" fill="#fff4ef" stroke="#f0c3ab"/><text x="640.0" y="110.7" text-anchor="middle" font-size="13" fill="#b8471a">7 min walk</text></g><g opacity="0.55"><path d="M62,132 L70,110 L78,132 L70,126 Z" fill="#7a7a9a"/><text x="70" y="150" text-anchor="middle" font-size="12" fill="#7a7a9a" font-weight="700">N</text></g><line x1="44" y1="466" x2="76" y2="466" stroke="#e85d26" stroke-width="4" stroke-dasharray="11 7" stroke-linecap="round"/><text x="86" y="471" font-size="13" fill="#7a7a9a">Walking route from BTS Asok</text></svg></div>
+        <figcaption class="area-map-caption"><span class="area-map-hint">Scroll sideways to see the whole map. </span>Schematic only — not drawn to scale. Walking times are from BTS Asok and vary with crossings and crowds. Soi Cowboy is a roughly 150 m lane linking Soi 21 and Soi 23. Street bearings are simplified too.</figcaption>
+      </figure>
 
       <div class="spot-card">
         <div class="spot-card-header">
@@ -1358,7 +1394,7 @@ footer {
 
       <div class="callout callout-info">
         <strong>🏙 Why Expats Love This Area:</strong>
-        Sukhumvit Soi 23 is a 10-minute walk from BTS Asok — easy to get to and easy to get home from. Unlike Nana or Patpong, the vibe here is relatively low-key, and many venues have English-speaking staff. It's the go-to area for corporate entertaining, team nights out, and casual after-work drinks.
+        Sukhumvit Soi 23 is about a 5-minute walk from BTS Asok — easy to get to and easy to get home from. Unlike Nana or Patpong, the vibe here is relatively low-key, and many venues have English-speaking staff. It's the go-to area for corporate entertaining, team nights out, and casual after-work drinks.
       </div>
 
       <div class="spot-card">

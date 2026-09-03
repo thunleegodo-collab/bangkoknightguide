@@ -59,7 +59,7 @@
   "url": "https://bangkoknightguide.com/zh/",
   "inLanguage": "zh-Hans",
   "datePublished": "2026-01-01",
-  "dateModified": "2026-09-02",
+  "dateModified": "2026-09-03",
   "publisher": {
     "@type": "Organization",
     "name": "Bangkok Night Guide",
@@ -848,6 +848,36 @@ footer {
 .related-guide-title { font-size: 1.02rem; font-weight: 700; color: var(--ink); margin: 6px 0 8px; }
 .related-guide-text { font-size: 0.86rem; color: var(--ink-light); line-height: 1.7; }
 @media(max-width:600px){ .related-guides { grid-template-columns: 1fr; gap: 12px; } }
+
+/* ── AREA MAP ── */
+.area-map-wrap {
+  margin: 28px 0 8px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+  overflow: hidden;
+}
+/* the article column is a grid item, whose automatic minimum size is its
+   min-content width; without this the map's min-width would widen the page */
+.content-grid > .article-body { min-width: 0; }
+.area-map-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; max-width: 100%; }
+.area-map { display: block; width: 100%; min-width: 660px; height: auto; }
+.area-map text { font-family: inherit; }
+.area-map-caption {
+  padding: 12px 18px 14px;
+  border-top: 1px solid var(--border);
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+.area-map-scroll:focus-visible { outline: 2px solid var(--orange); outline-offset: -2px; }
+.area-map-hint { font-weight: 700; color: var(--orange); }
+.area-map-wrap { position: relative; }
+.area-map-wrap::after {
+  content: ""; position: absolute; top: 0; right: 0; width: 44px; bottom: 56px;
+  background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.92));
+  pointer-events: none;
+}
 </style>
 <script type="application/ld+json">
 {
@@ -1133,6 +1163,12 @@ footer {
       <!-- Section 1 -->
       <h2 id="area">阿索克周边的夜生活区域</h2>
       <p>走出BTS阿索克站的那一刻，空气就变了。霓虹灯光、甜蜜的香气、不知从哪传来的重低音——步行10分钟范围内，曼谷顶级的欢乐场所密集分布，这里简直就是一座"成人主题乐园"。先把地理搞清楚，然后高效出击，拿下最嗨的一夜。</p>
+
+
+      <figure class="area-map-wrap">
+        <div class="area-map-scroll" tabindex="0" role="group" aria-label="阿索克一带地图"><svg class="area-map" viewBox="0 62 800 424" aria-labelledby="map-t map-d" xmlns="http://www.w3.org/2000/svg"><title id="map-t">阿索克一带地图</title><desc id="map-d">标示 BTS 阿索克站、MRT 素坤逸站、Terminal 21、牛仔街、素坤逸23巷与 Club LINE23 位置关系的示意图。</desc><defs><marker id="arw" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#e85d26"/></marker></defs><rect x="0" y="62" width="800" height="424" fill="#fafaf8"/><rect x="0" y="336" width="800" height="44" fill="#e9e9f1" stroke="#dcdce8"/><rect x="136" y="30" width="36" height="430" fill="#e9e9f1" stroke="#dcdce8"/><line x1="508" y1="352" x2="556" y2="100" stroke="#e9e9f1" stroke-width="36" stroke-linecap="round"/><line x1="508" y1="352" x2="556" y2="100" stroke="#dcdce8" stroke-width="36" stroke-linecap="round" fill="none" opacity="0.35"/><line x1="172" y1="240" x2="528" y2="240" stroke="#e9e9f1" stroke-width="28" stroke-linecap="round"/><rect x="26" y="222" width="106" height="84" rx="6" fill="#eef0f8" stroke="#d4d4e2"/><text x="79" y="258" text-anchor="middle" font-size="13" fill="#1a1a2e" font-weight="700">Terminal</text><text x="79" y="278" text-anchor="middle" font-size="13" fill="#1a1a2e" font-weight="700">21</text><text x="690" y="364" text-anchor="middle" font-size="15" fill="#7a7a9a">素坤逸路</text><text transform="translate(154 168) rotate(-90)" text-anchor="middle" font-size="14" fill="#7a7a9a">阿索克路（Soi 21）</text><text transform="translate(592 214) rotate(-78)" text-anchor="middle" font-size="15" fill="#7a7a9a">素坤逸23巷</text><text x="330" y="246" text-anchor="middle" font-size="16" fill="#1a1a2e" font-weight="700">牛仔街 Soi Cowboy</text><text x="14" y="326" font-size="13" fill="#7a7a9a">← 前往娜娜</text><text x="786" y="326" text-anchor="end" font-size="13" fill="#7a7a9a">前往通罗 →</text><path d="M154,406 L154,358 L506,358 L541,178" fill="none" stroke="#e85d26" stroke-width="4" stroke-dasharray="11 7" stroke-linecap="round" marker-end="url(#arw)"/><circle cx="154" cy="358" r="7" fill="#fff" stroke="#1a1a2e" stroke-width="3"/><g><rect x="93.7" y="409.0" width="120.6" height="30.0" rx="15.0" fill="#ffffff" stroke="#d4d4e2"/><text x="154.0" y="429.4" text-anchor="middle" font-size="15" fill="#3d3d5c" font-weight="700">BTS 阿索克站</text></g><circle cx="154" cy="300" r="6" fill="#fff" stroke="#1a1a2e" stroke-width="3"/><g><rect x="207.7" y="285.0" width="120.6" height="30.0" rx="15.0" fill="#ffffff" stroke="#d4d4e2"/><text x="268.0" y="305.4" text-anchor="middle" font-size="15" fill="#3d3d5c" font-weight="700">MRT 素坤逸站</text></g><line x1="161" y1="300" x2="208" y2="300" stroke="#c9c9d8" stroke-width="1.5"/><circle cx="519" cy="288" r="6" fill="#fff" stroke="#1a1a2e" stroke-width="3"/><g><rect x="600.9" y="273.5" width="122.1" height="29.0" rx="14.5" fill="#ffffff" stroke="#d4d4e2"/><text x="662.0" y="293.0" text-anchor="middle" font-size="14" fill="#3d3d5c">啤酒吧·小酒馆</text></g><line x1="527" y1="288" x2="601" y2="288" stroke="#c9c9d8" stroke-width="1.5"/><a href="#shoplist" aria-label="Club LINE23"><circle cx="546" cy="152" r="9" fill="#e85d26"/><circle cx="546" cy="152" r="15" fill="none" stroke="#e85d26" stroke-width="2" opacity="0.45"/><g><rect x="589.2" y="137.0" width="121.5" height="30.0" rx="15.0" fill="#fff4ef" stroke="#e85d26"/><text x="650.0" y="157.4" text-anchor="middle" font-size="15" fill="#b8471a" font-weight="700">Club LINE23</text></g></a><g><rect x="193.2" y="190.0" width="89.5" height="28.0" rx="14.0" fill="#fff" stroke="#e2e2ec"/><text x="238.0" y="208.7" text-anchor="middle" font-size="13" fill="#7a7a9a">步行3分钟</text></g><g><rect x="379.2" y="282.0" width="89.5" height="28.0" rx="14.0" fill="#fff" stroke="#e2e2ec"/><text x="424.0" y="300.7" text-anchor="middle" font-size="13" fill="#7a7a9a">步行5分钟</text></g><g><rect x="595.2" y="92.0" width="89.5" height="28.0" rx="14.0" fill="#fff4ef" stroke="#f0c3ab"/><text x="640.0" y="110.7" text-anchor="middle" font-size="13" fill="#b8471a">步行7分钟</text></g><g opacity="0.55"><path d="M62,132 L70,110 L78,132 L70,126 Z" fill="#7a7a9a"/><text x="70" y="150" text-anchor="middle" font-size="12" fill="#7a7a9a" font-weight="700">N</text></g><line x1="44" y1="466" x2="76" y2="466" stroke="#e85d26" stroke-width="4" stroke-dasharray="11 7" stroke-linecap="round"/><text x="86" y="471" font-size="13" fill="#7a7a9a">从 BTS 阿索克站出发的步行路线</text></svg></div>
+        <figcaption class="area-map-caption"><span class="area-map-hint">→ 可左右滑动查看　</span>※ 本图为位置关系示意图，比例并不精确。步行时间以 BTS 阿索克站为起点，会因等红灯与人潮而变动。牛仔街是连接 Soi 21 与 Soi 23、长约150米的巷子。道路走向也做了简化。</figcaption>
+      </figure>
 
       <div class="spot-card">
         <div class="spot-card-header">

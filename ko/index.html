@@ -64,7 +64,7 @@
   "url": "https://bangkoknightguide.com/ko/",
   "inLanguage": "ko",
   "datePublished": "2026-01-01",
-  "dateModified": "2026-09-02",
+  "dateModified": "2026-09-03",
   "publisher": {
     "@type": "Organization",
     "name": "Bangkok Night Guide",
@@ -853,6 +853,36 @@ footer {
 .related-guide-title { font-size: 1.02rem; font-weight: 700; color: var(--ink); margin: 6px 0 8px; }
 .related-guide-text { font-size: 0.86rem; color: var(--ink-light); line-height: 1.7; }
 @media(max-width:600px){ .related-guides { grid-template-columns: 1fr; gap: 12px; } }
+
+/* ── AREA MAP ── */
+.area-map-wrap {
+  margin: 28px 0 8px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+  overflow: hidden;
+}
+/* the article column is a grid item, whose automatic minimum size is its
+   min-content width; without this the map's min-width would widen the page */
+.content-grid > .article-body { min-width: 0; }
+.area-map-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; max-width: 100%; }
+.area-map { display: block; width: 100%; min-width: 660px; height: auto; }
+.area-map text { font-family: inherit; }
+.area-map-caption {
+  padding: 12px 18px 14px;
+  border-top: 1px solid var(--border);
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+.area-map-scroll:focus-visible { outline: 2px solid var(--orange); outline-offset: -2px; }
+.area-map-hint { font-weight: 700; color: var(--orange); }
+.area-map-wrap { position: relative; }
+.area-map-wrap::after {
+  content: ""; position: absolute; top: 0; right: 0; width: 44px; bottom: 56px;
+  background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.92));
+  pointer-events: none;
+}
 </style>
 <script type="application/ld+json">
 {
@@ -1148,6 +1178,12 @@ footer {
       <!-- Section 1 -->
       <h2 id="area">방콕 아속 밤문화 에리어 가이드</h2>
       <p>BTS 아속역에서 내리는 순간, 공기가 달라집니다. 네온의 빛, 달콤한 향기, 어디선가 들려오는 중저음――도보 10분 이내에 방콕 최고의 환락 스팟이 밀집한 이 에리어는, 그야말로 '어른의 테마파크'. 먼저 지리를 머릿속에 넣고, 최고의 밤을 효율적으로 공략합시다.</p>
+
+
+      <figure class="area-map-wrap">
+        <div class="area-map-scroll" tabindex="0" role="group" aria-label="아속 일대 지도"><svg class="area-map" viewBox="0 62 800 424" aria-labelledby="map-t map-d" xmlns="http://www.w3.org/2000/svg"><title id="map-t">아속 일대 지도</title><desc id="map-d">BTS 아속역·MRT 수쿰윗역·터미널21·소이 카우보이·소이 23·Club LINE23의 위치 관계를 나타낸 개념도.</desc><defs><marker id="arw" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#e85d26"/></marker></defs><rect x="0" y="62" width="800" height="424" fill="#fafaf8"/><rect x="0" y="336" width="800" height="44" fill="#e9e9f1" stroke="#dcdce8"/><rect x="136" y="30" width="36" height="430" fill="#e9e9f1" stroke="#dcdce8"/><line x1="508" y1="352" x2="556" y2="100" stroke="#e9e9f1" stroke-width="36" stroke-linecap="round"/><line x1="508" y1="352" x2="556" y2="100" stroke="#dcdce8" stroke-width="36" stroke-linecap="round" fill="none" opacity="0.35"/><line x1="172" y1="240" x2="528" y2="240" stroke="#e9e9f1" stroke-width="28" stroke-linecap="round"/><rect x="26" y="222" width="106" height="84" rx="6" fill="#eef0f8" stroke="#d4d4e2"/><text x="79" y="268" text-anchor="middle" font-size="13" fill="#1a1a2e" font-weight="700">터미널21</text><text x="690" y="364" text-anchor="middle" font-size="15" fill="#7a7a9a">수쿰윗 로드</text><text transform="translate(154 168) rotate(-90)" text-anchor="middle" font-size="14" fill="#7a7a9a">아속 몬뜨리 로드(Soi 21)</text><text transform="translate(592 214) rotate(-78)" text-anchor="middle" font-size="15" fill="#7a7a9a">소이 23</text><text x="330" y="246" text-anchor="middle" font-size="16" fill="#1a1a2e" font-weight="700">소이 카우보이</text><text x="14" y="326" font-size="13" fill="#7a7a9a">← 나나 방면</text><text x="786" y="326" text-anchor="end" font-size="13" fill="#7a7a9a">통러 방면 →</text><path d="M154,406 L154,358 L506,358 L541,178" fill="none" stroke="#e85d26" stroke-width="4" stroke-dasharray="11 7" stroke-linecap="round" marker-end="url(#arw)"/><circle cx="154" cy="358" r="7" fill="#fff" stroke="#1a1a2e" stroke-width="3"/><g><rect x="101.2" y="409.0" width="105.6" height="30.0" rx="15.0" fill="#ffffff" stroke="#d4d4e2"/><text x="154.0" y="429.4" text-anchor="middle" font-size="15" fill="#3d3d5c" font-weight="700">BTS 아속역</text></g><circle cx="154" cy="300" r="6" fill="#fff" stroke="#1a1a2e" stroke-width="3"/><g><rect x="207.7" y="285.0" width="120.6" height="30.0" rx="15.0" fill="#ffffff" stroke="#d4d4e2"/><text x="268.0" y="305.4" text-anchor="middle" font-size="15" fill="#3d3d5c" font-weight="700">MRT 수쿰윗역</text></g><line x1="161" y1="300" x2="208" y2="300" stroke="#c9c9d8" stroke-width="1.5"/><circle cx="519" cy="288" r="6" fill="#fff" stroke="#1a1a2e" stroke-width="3"/><g><rect x="600.9" y="273.5" width="122.1" height="29.0" rx="14.5" fill="#ffffff" stroke="#d4d4e2"/><text x="662.0" y="293.0" text-anchor="middle" font-size="14" fill="#3d3d5c">비어바·스낵바</text></g><line x1="527" y1="288" x2="601" y2="288" stroke="#c9c9d8" stroke-width="1.5"/><a href="#shoplist" aria-label="Club LINE23"><circle cx="546" cy="152" r="9" fill="#e85d26"/><circle cx="546" cy="152" r="15" fill="none" stroke="#e85d26" stroke-width="2" opacity="0.45"/><g><rect x="589.2" y="137.0" width="121.5" height="30.0" rx="15.0" fill="#fff4ef" stroke="#e85d26"/><text x="650.0" y="157.4" text-anchor="middle" font-size="15" fill="#b8471a" font-weight="700">Club LINE23</text></g></a><g><rect x="197.8" y="190.0" width="80.4" height="28.0" rx="14.0" fill="#fff" stroke="#e2e2ec"/><text x="238.0" y="208.7" text-anchor="middle" font-size="13" fill="#7a7a9a">도보 3분</text></g><g><rect x="383.8" y="282.0" width="80.4" height="28.0" rx="14.0" fill="#fff" stroke="#e2e2ec"/><text x="424.0" y="300.7" text-anchor="middle" font-size="13" fill="#7a7a9a">도보 5분</text></g><g><rect x="599.8" y="92.0" width="80.4" height="28.0" rx="14.0" fill="#fff4ef" stroke="#f0c3ab"/><text x="640.0" y="110.7" text-anchor="middle" font-size="13" fill="#b8471a">도보 7분</text></g><g opacity="0.55"><path d="M62,132 L70,110 L78,132 L70,126 Z" fill="#7a7a9a"/><text x="70" y="150" text-anchor="middle" font-size="12" fill="#7a7a9a" font-weight="700">N</text></g><line x1="44" y1="466" x2="76" y2="466" stroke="#e85d26" stroke-width="4" stroke-dasharray="11 7" stroke-linecap="round"/><text x="86" y="471" font-size="13" fill="#7a7a9a">BTS 아속역에서의 도보 경로</text></svg></div>
+        <figcaption class="area-map-caption"><span class="area-map-hint">→ 옆으로 스크롤할 수 있습니다　</span>※ 위치 관계를 나타낸 개념도이며 축척은 정확하지 않습니다. 도보 시간은 BTS 아속역 기준이며 신호 대기와 혼잡에 따라 달라집니다. 소이 카우보이는 소이 21과 소이 23을 잇는 약 150m 골목입니다. 도로의 방향도 단순화했습니다.</figcaption>
+      </figure>
 
       <div class="spot-card">
         <div class="spot-card-header">
