@@ -59,7 +59,7 @@
   "url": "https://bangkoknightguide.com/ja/",
   "inLanguage": "ja",
   "datePublished": "2026-01-01",
-  "dateModified": "2026-09-03",
+  "dateModified": "2026-09-05",
   "publisher": {
     "@type": "Organization",
     "name": "Bangkok Night Guide",
@@ -231,15 +231,19 @@ header {
 
 /* ── LAYOUT ── */
 .page-wrap { max-width: 900px; margin: 0 auto; padding: 48px 24px; }
-.content-grid {
+.content-grid { display: block; }
+/* the summary cards sit above the article so the article itself gets the
+   full page width; two across on desktop, stacked on narrow screens */
+.sidebar {
   display: grid;
-  grid-template-columns: 1fr 280px;
-  gap: 48px;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
   align-items: start;
+  margin-bottom: 36px;
 }
+.sidebar .sidebar-card { margin-bottom: 0; }
 @media(max-width:720px){
-  .content-grid { grid-template-columns: 1fr; }
-  .sidebar { display: none; }
+  .sidebar { grid-template-columns: 1fr; gap: 14px; margin-bottom: 26px; }
 }
 
 /* ── ARTICLE (h2/h3 only) ── */
@@ -354,8 +358,8 @@ header {
   background: #fff;
   overflow: hidden;
 }
-/* the article column is a grid item, whose automatic minimum size is its
-   min-content width; without this the map's min-width would widen the page */
+/* guard: kept from when the article was a grid item, whose automatic minimum
+   size is its min-content width and let the map's min-width widen the page */
 .content-grid > .article-body { min-width: 0; }
 .area-map-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; max-width: 100%; }
 .area-map { display: block; width: 100%; min-width: 660px; height: auto; }
@@ -368,12 +372,17 @@ header {
   line-height: 1.7;
 }
 .area-map-scroll:focus-visible { outline: 2px solid var(--orange); outline-offset: -2px; }
-.area-map-hint { font-weight: 700; color: var(--orange); }
 .area-map-wrap { position: relative; }
-.area-map-wrap::after {
-  content: ""; position: absolute; top: 0; right: 0; width: 44px; bottom: 56px;
-  background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.92));
-  pointer-events: none;
+.area-map-hint { display: none; font-weight: 700; color: var(--orange); }
+/* the map needs 660px; the column is vw - 42 here (20px page padding
+   each side at this breakpoint + 1px border each side), so it fits from 702px */
+@media(max-width:701px){
+  .area-map-wrap::after {
+    content: ""; position: absolute; top: 0; right: 0; width: 44px; bottom: 56px;
+    background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.92));
+    pointer-events: none;
+  }
+  .area-map-hint { display: inline; }
 }
 </style>
 <script type="application/ld+json">
@@ -540,6 +549,42 @@ header {
 
 <!-- Main -->
 <div class="page-wrap">
+
+    <!-- Summary cards -->
+    <aside class="sidebar" aria-label="エリアの概要">
+
+      <div class="sidebar-card">
+        <div class="sidebar-header">📍 エリア基本情報</div>
+        <div class="sidebar-body quick-facts">
+          <div class="quick-fact"><span class="qf-label">最寄り駅</span><span class="qf-value">BTSアソーク</span></div>
+          <div class="quick-fact"><span class="qf-label">ソイカウボーイ</span><span class="qf-value">徒歩3分</span></div>
+          <div class="quick-fact"><span class="qf-label">LINE23</span><span class="qf-value">徒歩7分</span></div>
+          <div class="quick-fact"><span class="qf-label">営業時間帯</span><span class="qf-value">20:00〜翌1:00</span></div>
+          <div class="quick-fact"><span class="qf-label">おすすめ人数</span><span class="qf-value">2〜6名</span></div>
+          <div class="quick-fact"><span class="qf-label">言語対応</span><span class="qf-value">日本語・英語</span></div>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-header">🗺 夜遊びコース</div>
+        <div class="sidebar-body">
+          <div class="sidebar-item">
+            <div class="sidebar-item-icon">🕗</div>
+            <div class="sidebar-item-text"><strong>20:00</strong> The Localで本格タイ料理ディナー</div>
+          </div>
+          <div class="sidebar-item">
+            <div class="sidebar-item-icon">🕥</div>
+            <div class="sidebar-item-text"><strong>21:30</strong> スナックで盛り上がる</div>
+          </div>
+          <div class="sidebar-item">
+            <div class="sidebar-item-icon">🕦</div>
+            <div class="sidebar-item-text"><strong>23:30〜</strong> ソイカウボーイ見学</div>
+          </div>
+        </div>
+      </div>
+
+    </aside>
+
   <div class="content-grid">
 
     <!-- Article -->
@@ -1068,40 +1113,6 @@ header {
 
     </main>
 
-    <!-- Sidebar -->
-    <aside class="sidebar">
-
-      <div class="sidebar-card">
-        <div class="sidebar-header">📍 エリア基本情報</div>
-        <div class="sidebar-body quick-facts">
-          <div class="quick-fact"><span class="qf-label">最寄り駅</span><span class="qf-value">BTSアソーク</span></div>
-          <div class="quick-fact"><span class="qf-label">ソイカウボーイ</span><span class="qf-value">徒歩3分</span></div>
-          <div class="quick-fact"><span class="qf-label">LINE23</span><span class="qf-value">徒歩7分</span></div>
-          <div class="quick-fact"><span class="qf-label">営業時間帯</span><span class="qf-value">20:00〜翌1:00</span></div>
-          <div class="quick-fact"><span class="qf-label">おすすめ人数</span><span class="qf-value">2〜6名</span></div>
-          <div class="quick-fact"><span class="qf-label">言語対応</span><span class="qf-value">日本語・英語</span></div>
-        </div>
-      </div>
-
-      <div class="sidebar-card">
-        <div class="sidebar-header">🗺 夜遊びコース</div>
-        <div class="sidebar-body">
-          <div class="sidebar-item">
-            <div class="sidebar-item-icon">🕗</div>
-            <div class="sidebar-item-text"><strong>20:00</strong> The Localで本格タイ料理ディナー</div>
-          </div>
-          <div class="sidebar-item">
-            <div class="sidebar-item-icon">🕥</div>
-            <div class="sidebar-item-text"><strong>21:30</strong> スナックで盛り上がる</div>
-          </div>
-          <div class="sidebar-item">
-            <div class="sidebar-item-icon">🕦</div>
-            <div class="sidebar-item-text"><strong>23:30〜</strong> ソイカウボーイ見学</div>
-          </div>
-        </div>
-      </div>
-
-    </aside>
   </div>
 </div>
 
@@ -1417,7 +1428,7 @@ table.compare .row-highlight .row-head { color: var(--orange); }
 .btn-outline:hover { border-color: var(--orange); color: var(--orange); }
 
 /* ── SIDEBAR ── */
-.sidebar { position: sticky; top: 80px; }
+/* (was position: sticky; only correct while this was a right-hand column) */
 .sidebar-card {
   background: #fff;
   border: 1px solid var(--border);

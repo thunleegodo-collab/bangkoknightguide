@@ -18,8 +18,8 @@ CSS = """
   background: #fff;
   overflow: hidden;
 }
-/* the article column is a grid item, whose automatic minimum size is its
-   min-content width; without this the map's min-width would widen the page */
+/* guard: kept from when the article was a grid item, whose automatic minimum
+   size is its min-content width and let the map's min-width widen the page */
 .content-grid > .article-body { min-width: 0; }
 .area-map-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; max-width: 100%; }
 .area-map { display: block; width: 100%; min-width: 660px; height: auto; }
@@ -32,12 +32,17 @@ CSS = """
   line-height: 1.7;
 }
 .area-map-scroll:focus-visible { outline: 2px solid var(--orange); outline-offset: -2px; }
-.area-map-hint { font-weight: 700; color: var(--orange); }
 .area-map-wrap { position: relative; }
-.area-map-wrap::after {
-  content: ""; position: absolute; top: 0; right: 0; width: 44px; bottom: 56px;
-  background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.92));
-  pointer-events: none;
+.area-map-hint { display: none; font-weight: 700; color: var(--orange); }
+/* the map needs 660px; the column is vw - 42 here (20px page padding
+   each side at this breakpoint + 1px border each side), so it fits from 702px */
+@media(max-width:701px){
+  .area-map-wrap::after {
+    content: ""; position: absolute; top: 0; right: 0; width: 44px; bottom: 56px;
+    background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.92));
+    pointer-events: none;
+  }
+  .area-map-hint { display: inline; }
 }
 """
 

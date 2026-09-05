@@ -64,7 +64,7 @@
   "url": "https://bangkoknightguide.com/ko/",
   "inLanguage": "ko",
   "datePublished": "2026-01-01",
-  "dateModified": "2026-09-03",
+  "dateModified": "2026-09-05",
   "publisher": {
     "@type": "Organization",
     "name": "Bangkok Night Guide",
@@ -213,15 +213,19 @@ header {
 
 /* ── LAYOUT ── */
 .page-wrap { max-width: 900px; margin: 0 auto; padding: 48px 24px; }
-.content-grid {
+.content-grid { display: block; }
+/* the summary cards sit above the article so the article itself gets the
+   full page width; two across on desktop, stacked on narrow screens */
+.sidebar {
   display: grid;
-  grid-template-columns: 1fr 280px;
-  gap: 48px;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
   align-items: start;
+  margin-bottom: 36px;
 }
+.sidebar .sidebar-card { margin-bottom: 0; }
 @media(max-width:720px){
-  .content-grid { grid-template-columns: 1fr; }
-  .sidebar { display: none; }
+  .sidebar { grid-template-columns: 1fr; gap: 14px; margin-bottom: 26px; }
 }
 
 /* ── ARTICLE ── */
@@ -535,7 +539,7 @@ table.compare .row-highlight .row-head { color: var(--orange); }
 .btn-outline:hover { border-color: var(--orange); color: var(--orange); }
 
 /* ── SIDEBAR ── */
-.sidebar { position: sticky; top: 80px; }
+/* (was position: sticky; only correct while this was a right-hand column) */
 .sidebar-card {
   background: #fff;
   border: 1px solid var(--border);
@@ -862,8 +866,8 @@ footer {
   background: #fff;
   overflow: hidden;
 }
-/* the article column is a grid item, whose automatic minimum size is its
-   min-content width; without this the map's min-width would widen the page */
+/* guard: kept from when the article was a grid item, whose automatic minimum
+   size is its min-content width and let the map's min-width widen the page */
 .content-grid > .article-body { min-width: 0; }
 .area-map-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; max-width: 100%; }
 .area-map { display: block; width: 100%; min-width: 660px; height: auto; }
@@ -876,12 +880,17 @@ footer {
   line-height: 1.7;
 }
 .area-map-scroll:focus-visible { outline: 2px solid var(--orange); outline-offset: -2px; }
-.area-map-hint { font-weight: 700; color: var(--orange); }
 .area-map-wrap { position: relative; }
-.area-map-wrap::after {
-  content: ""; position: absolute; top: 0; right: 0; width: 44px; bottom: 56px;
-  background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.92));
-  pointer-events: none;
+.area-map-hint { display: none; font-weight: 700; color: var(--orange); }
+/* the map needs 660px; the column is vw - 42 here (20px page padding
+   each side at this breakpoint + 1px border each side), so it fits from 702px */
+@media(max-width:701px){
+  .area-map-wrap::after {
+    content: ""; position: absolute; top: 0; right: 0; width: 44px; bottom: 56px;
+    background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.92));
+    pointer-events: none;
+  }
+  .area-map-hint { display: inline; }
 }
 </style>
 <script type="application/ld+json">
@@ -1072,6 +1081,42 @@ footer {
 
 <!-- Main -->
 <div class="page-wrap">
+
+    <!-- Summary cards -->
+    <aside class="sidebar" aria-label="지역 요약">
+
+      <div class="sidebar-card">
+        <div class="sidebar-header">📍 지역 기본 정보</div>
+        <div class="sidebar-body quick-facts">
+          <div class="quick-fact"><span class="qf-label">가까운 역</span><span class="qf-value">BTS 아속</span></div>
+          <div class="quick-fact"><span class="qf-label">소이카우보이</span><span class="qf-value">도보 3분</span></div>
+          <div class="quick-fact"><span class="qf-label">LINE23</span><span class="qf-value">도보 7분</span></div>
+          <div class="quick-fact"><span class="qf-label">영업 시간대</span><span class="qf-value">20:00~익일 1:00</span></div>
+          <div class="quick-fact"><span class="qf-label">추천 인원</span><span class="qf-value">2~6명</span></div>
+          <div class="quick-fact"><span class="qf-label">언어 지원</span><span class="qf-value">영어·일본어</span></div>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-header">🗺 밤문화 코스</div>
+        <div class="sidebar-body">
+          <div class="sidebar-item">
+            <div class="sidebar-item-icon">🕗</div>
+            <div class="sidebar-item-text"><strong>20:00</strong> The Local에서 본격 태국 요리 디너</div>
+          </div>
+          <div class="sidebar-item">
+            <div class="sidebar-item-icon">🕥</div>
+            <div class="sidebar-item-text"><strong>21:30</strong> 스낵에서 달아오르기</div>
+          </div>
+          <div class="sidebar-item">
+            <div class="sidebar-item-icon">🕦</div>
+            <div class="sidebar-item-text"><strong>23:30~</strong> 소이카우보이 견학</div>
+          </div>
+        </div>
+      </div>
+
+    </aside>
+
   <div class="content-grid">
 
     <!-- Article -->
@@ -1741,40 +1786,6 @@ footer {
 
     </main>
 
-    <!-- Sidebar -->
-    <aside class="sidebar">
-
-      <div class="sidebar-card">
-        <div class="sidebar-header">📍 지역 기본 정보</div>
-        <div class="sidebar-body quick-facts">
-          <div class="quick-fact"><span class="qf-label">가까운 역</span><span class="qf-value">BTS 아속</span></div>
-          <div class="quick-fact"><span class="qf-label">소이카우보이</span><span class="qf-value">도보 3분</span></div>
-          <div class="quick-fact"><span class="qf-label">LINE23</span><span class="qf-value">도보 7분</span></div>
-          <div class="quick-fact"><span class="qf-label">영업 시간대</span><span class="qf-value">20:00~익일 1:00</span></div>
-          <div class="quick-fact"><span class="qf-label">추천 인원</span><span class="qf-value">2~6명</span></div>
-          <div class="quick-fact"><span class="qf-label">언어 지원</span><span class="qf-value">영어·일본어</span></div>
-        </div>
-      </div>
-
-      <div class="sidebar-card">
-        <div class="sidebar-header">🗺 밤문화 코스</div>
-        <div class="sidebar-body">
-          <div class="sidebar-item">
-            <div class="sidebar-item-icon">🕗</div>
-            <div class="sidebar-item-text"><strong>20:00</strong> The Local에서 본격 태국 요리 디너</div>
-          </div>
-          <div class="sidebar-item">
-            <div class="sidebar-item-icon">🕥</div>
-            <div class="sidebar-item-text"><strong>21:30</strong> 스낵에서 달아오르기</div>
-          </div>
-          <div class="sidebar-item">
-            <div class="sidebar-item-icon">🕦</div>
-            <div class="sidebar-item-text"><strong>23:30~</strong> 소이카우보이 견학</div>
-          </div>
-        </div>
-      </div>
-
-    </aside>
   </div>
 </div>
 

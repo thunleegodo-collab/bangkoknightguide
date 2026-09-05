@@ -59,7 +59,7 @@
   "url": "https://bangkoknightguide.com/",
   "inLanguage": "en",
   "datePublished": "2026-01-01",
-  "dateModified": "2026-09-03",
+  "dateModified": "2026-09-05",
   "publisher": {
     "@type": "Organization",
     "name": "Bangkok Night Guide",
@@ -208,15 +208,19 @@ header {
 
 /* ── LAYOUT ── */
 .page-wrap { max-width: 900px; margin: 0 auto; padding: 48px 24px; }
-.content-grid {
+.content-grid { display: block; }
+/* the summary cards sit above the article so the article itself gets the
+   full page width; two across on desktop, stacked on narrow screens */
+.sidebar {
   display: grid;
-  grid-template-columns: 1fr 280px;
-  gap: 48px;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
   align-items: start;
+  margin-bottom: 36px;
 }
+.sidebar .sidebar-card { margin-bottom: 0; }
 @media(max-width:720px){
-  .content-grid { grid-template-columns: 1fr; }
-  .sidebar { display: none; }
+  .sidebar { grid-template-columns: 1fr; gap: 14px; margin-bottom: 26px; }
 }
 
 /* ── ARTICLE ── */
@@ -530,7 +534,7 @@ table.compare .row-highlight .row-head { color: var(--orange); }
 .btn-outline:hover { border-color: var(--orange); color: var(--orange); }
 
 /* ── SIDEBAR ── */
-.sidebar { position: sticky; top: 80px; }
+/* (was position: sticky; only correct while this was a right-hand column) */
 .sidebar-card {
   background: #fff;
   border: 1px solid var(--border);
@@ -857,8 +861,8 @@ footer {
   background: #fff;
   overflow: hidden;
 }
-/* the article column is a grid item, whose automatic minimum size is its
-   min-content width; without this the map's min-width would widen the page */
+/* guard: kept from when the article was a grid item, whose automatic minimum
+   size is its min-content width and let the map's min-width widen the page */
 .content-grid > .article-body { min-width: 0; }
 .area-map-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; max-width: 100%; }
 .area-map { display: block; width: 100%; min-width: 660px; height: auto; }
@@ -871,13 +875,24 @@ footer {
   line-height: 1.7;
 }
 .area-map-scroll:focus-visible { outline: 2px solid var(--orange); outline-offset: -2px; }
-.area-map-hint { font-weight: 700; color: var(--orange); }
 .area-map-wrap { position: relative; }
-.area-map-wrap::after {
-  content: ""; position: absolute; top: 0; right: 0; width: 44px; bottom: 56px;
-  background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.92));
-  pointer-events: none;
+.area-map-hint { display: none; font-weight: 700; color: var(--orange); }
+/* the map needs 660px; the column is vw - 42 here (20px page padding
+   each side at this breakpoint + 1px border each side), so it fits from 702px */
+@media(max-width:701px){
+  .area-map-wrap::after {
+    content: ""; position: absolute; top: 0; right: 0; width: 44px; bottom: 56px;
+    background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.92));
+    pointer-events: none;
+  }
+  .area-map-hint { display: inline; }
 }
+
+/* English ran ~122 characters per line at the full column width; 65ch measures
+   76-80 characters, which clears the 80-character guideline. Caps body prose
+   including the news items and spot cards; tables and the map keep the
+   full width because they are not paragraphs */
+.article-body p { max-width: 65ch; }
 </style>
 <script type="application/ld+json">
 {
@@ -1043,6 +1058,42 @@ footer {
 
 <!-- Main -->
 <div class="page-wrap">
+
+    <!-- Summary cards -->
+    <aside class="sidebar" aria-label="Area summary">
+
+      <div class="sidebar-card">
+        <div class="sidebar-header">📍 Area Quick Facts</div>
+        <div class="sidebar-body quick-facts">
+          <div class="quick-fact"><span class="qf-label">Nearest Station</span><span class="qf-value">BTS Asok</span></div>
+          <div class="quick-fact"><span class="qf-label">Soi Cowboy</span><span class="qf-value">3-min walk</span></div>
+          <div class="quick-fact"><span class="qf-label">LINE23</span><span class="qf-value">7-min walk</span></div>
+          <div class="quick-fact"><span class="qf-label">Operating Hours</span><span class="qf-value">8:00 PM – 1:00 AM</span></div>
+          <div class="quick-fact"><span class="qf-label">Ideal Group Size</span><span class="qf-value">2–6 people</span></div>
+          <div class="quick-fact"><span class="qf-label">Languages</span><span class="qf-value">Japanese & English</span></div>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-header">🗺 Suggested Itinerary</div>
+        <div class="sidebar-body">
+          <div class="sidebar-item">
+            <div class="sidebar-item-icon">🕗</div>
+            <div class="sidebar-item-text"><strong>8:00 PM</strong> Thai dinner at The Local</div>
+          </div>
+          <div class="sidebar-item">
+            <div class="sidebar-item-icon">🕥</div>
+            <div class="sidebar-item-text"><strong>9:30 PM</strong> Snack bar for up-close fun</div>
+          </div>
+          <div class="sidebar-item">
+            <div class="sidebar-item-icon">🕦</div>
+            <div class="sidebar-item-text"><strong>11:30 PM+</strong> Soi Cowboy sexy shows</div>
+          </div>
+        </div>
+      </div>
+
+    </aside>
+
   <div class="content-grid">
 
     <!-- Article -->
@@ -1571,40 +1622,6 @@ footer {
 
     </main>
 
-    <!-- Sidebar -->
-    <aside class="sidebar">
-
-      <div class="sidebar-card">
-        <div class="sidebar-header">📍 Area Quick Facts</div>
-        <div class="sidebar-body quick-facts">
-          <div class="quick-fact"><span class="qf-label">Nearest Station</span><span class="qf-value">BTS Asok</span></div>
-          <div class="quick-fact"><span class="qf-label">Soi Cowboy</span><span class="qf-value">3-min walk</span></div>
-          <div class="quick-fact"><span class="qf-label">LINE23</span><span class="qf-value">7-min walk</span></div>
-          <div class="quick-fact"><span class="qf-label">Operating Hours</span><span class="qf-value">8:00 PM – 1:00 AM</span></div>
-          <div class="quick-fact"><span class="qf-label">Ideal Group Size</span><span class="qf-value">2–6 people</span></div>
-          <div class="quick-fact"><span class="qf-label">Languages</span><span class="qf-value">Japanese & English</span></div>
-        </div>
-      </div>
-
-      <div class="sidebar-card">
-        <div class="sidebar-header">🗺 Suggested Itinerary</div>
-        <div class="sidebar-body">
-          <div class="sidebar-item">
-            <div class="sidebar-item-icon">🕗</div>
-            <div class="sidebar-item-text"><strong>8:00 PM</strong> Thai dinner at The Local</div>
-          </div>
-          <div class="sidebar-item">
-            <div class="sidebar-item-icon">🕥</div>
-            <div class="sidebar-item-text"><strong>9:30 PM</strong> Snack bar for up-close fun</div>
-          </div>
-          <div class="sidebar-item">
-            <div class="sidebar-item-icon">🕦</div>
-            <div class="sidebar-item-text"><strong>11:30 PM+</strong> Soi Cowboy sexy shows</div>
-          </div>
-        </div>
-      </div>
-
-    </aside>
   </div>
 </div>
 
