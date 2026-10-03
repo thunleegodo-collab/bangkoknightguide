@@ -30,7 +30,8 @@ PAGES = {"budget": "nightlife-budget.html", "scams": "nightlife-scams.html"}
 KEY = os.environ.get("PAGE_KEY", "budget")
 PAGE = PAGES[KEY]
 PUBLISHED = "2026-09-02"
-MODIFIED  = "2026-09-02"
+# Bump only the page whose content changed, so the other keeps its real date
+MODIFIED  = {"budget": "2026-09-02", "scams": "2026-10-02"}[KEY]
 
 def url(lang):
     return "%s/%s/%s" % (SITE, DIRS[lang], PAGE)
